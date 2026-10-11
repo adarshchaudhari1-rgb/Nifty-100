@@ -64,9 +64,13 @@ def run_once(now=None) -> None:
     if now.time() < config.SELECTION_TIME:
         print(f"Before {config.SELECTION_TIME:%H:%M} - nothing to do yet")
         return
+    wl = scanner.load_watchlist(today_str)
+    if wl:
+        data.seed_instrument_keys(wl.get("instrument_keys"))   # saves re-downloading Upstox's list
     if not data.market_traded_today(today):
         print("No candles for today (market holiday or data problem) - skipping this run")
         return
+    print(f"Data source: {data.LAST_SOURCE}")
 
     trader = PaperTrader()
 
@@ -77,7 +81,6 @@ def run_once(now=None) -> None:
             trader.force_close(sym, trader.open_trades[sym]["entry"], str(now), "STALE_RESET")
 
     # 1. Today's watchlist (created once, on the first run after 10:00)
-    wl = scanner.load_watchlist(today_str)
     if wl is None:
         wl = scanner.run_selection(now)
         if wl is None:
