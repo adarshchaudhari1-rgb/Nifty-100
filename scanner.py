@@ -42,7 +42,8 @@ def classify(green_pct: float) -> str:
     return "NEUTRAL"
 
 
-def build_watchlist(rows: list, today_str: str, source: str, selected_at: str) -> dict:
+def build_watchlist(rows: list, today_str: str, source: str, selected_at: str,
+                    data_source: str = "Yahoo Finance", instrument_keys: dict = None) -> dict:
     """rows: [{symbol, pct_change, price, prev_close}] -> watchlist dict (pure logic)."""
     green = sum(1 for r in rows if r["pct_change"] > 0)
     red = sum(1 for r in rows if r["pct_change"] < 0)
@@ -61,6 +62,8 @@ def build_watchlist(rows: list, today_str: str, source: str, selected_at: str) -
         "date": today_str,
         "selected_at": selected_at,
         "universe_source": source,
+        "data_source": data_source,
+        "instrument_keys": instrument_keys or {},
         "stocks_with_data": len(rows),
         "green": green,
         "red": red,
@@ -104,7 +107,10 @@ def run_selection(now: datetime):
               f"not selecting today, will retry on the next run")
         return None
 
-    wl = build_watchlist(rows, today_str, source, now.strftime("%Y-%m-%d %H:%M:%S"))
+    wl = build_watchlist(rows, today_str, source, now.strftime("%Y-%m-%d %H:%M:%S"),
+                         data_source=data.LAST_SOURCE)
+    if data.LAST_SOURCE == "Upstox":      # remember keys so later runs don't re-download the big file
+        wl["instrument_keys"] = data.get_instrument_keys([s["symbol"] for s in wl["stocks"]])
     with open(WATCHLIST_FILE, "w") as f:
         json.dump(wl, f, indent=2)
     return wl
@@ -112,7 +118,8 @@ def run_selection(now: datetime):
 
 def describe(wl: dict) -> str:
     head = (f"Market: {wl['nature']} - {wl['green']} green / {wl['red']} red "
-            f"({wl['green_pct']}% green) as of {config.SELECTION_TIME.strftime('%H:%M')}")
+            f"({wl['green_pct']}% green) as of {config.SELECTION_TIME.strftime('%H:%M')} "
+            f"[data: {wl.get('data_source', 'Yahoo Finance')}]")
     if not wl["stocks"]:
         return head + " -> no trades today (market not clearly directional)"
     picks = ", ".join(f"{s['symbol'].replace('.NS', '')} {s['pct_change']:+.2f}%" for s in wl["stocks"])
