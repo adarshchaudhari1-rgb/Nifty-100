@@ -1,50 +1,50 @@
 {
-  "date": "2026-10-12",
-  "selected_at": "2026-10-12 11:32:54",
+  "date": "2026-10-13",
+  "selected_at": "2026-10-13 12:48:03",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "TATACAP.NS": "NSE_EQ|INE976I01016",
-    "BAJAJ-AUTO.NS": "NSE_EQ|INE917I01010",
-    "IRFC.NS": "NSE_EQ|INE053F01010",
-    "SIEMENS.NS": "NSE_EQ|INE003A01024",
-    "MAZDOCK.NS": "NSE_EQ|INE249Z01020"
+    "TCS.NS": "NSE_EQ|INE467B01029",
+    "HCLTECH.NS": "NSE_EQ|INE860A01027",
+    "HYUNDAI.NS": "NSE_EQ|INE0V6F01027",
+    "TECHM.NS": "NSE_EQ|INE669C01036",
+    "LTM.NS": "NSE_EQ|INE214T01019"
   },
   "stocks_with_data": 100,
-  "green": 73,
-  "red": 26,
-  "green_pct": 73.7,
+  "green": 75,
+  "red": 25,
+  "green_pct": 75.0,
   "nature": "BULLISH",
   "stocks": [
     {
-      "symbol": "TATACAP.NS",
-      "pct_change": 3.23,
-      "price": 329.0,
-      "prev_close": 318.7
+      "symbol": "TCS.NS",
+      "pct_change": 5.23,
+      "price": 2236.2,
+      "prev_close": 2125.0
     },
     {
-      "symbol": "BAJAJ-AUTO.NS",
-      "pct_change": 3.16,
-      "price": 10087.0,
-      "prev_close": 9778.0
+      "symbol": "HCLTECH.NS",
+      "pct_change": 4.37,
+      "price": 1276.5,
+      "prev_close": 1223.0
     },
     {
-      "symbol": "IRFC.NS",
-      "pct_change": 2.99,
-      "price": 76.93,
-      "prev_close": 74.7
+      "symbol": "HYUNDAI.NS",
+      "pct_change": 3.11,
+      "price": 2001.4,
+      "prev_close": 1941.1
     },
     {
-      "symbol": "SIEMENS.NS",
-      "pct_change": 2.82,
-      "price": 3696.5,
-      "prev_close": 3595.0
+      "symbol": "TECHM.NS",
+      "pct_change": 3.07,
+      "price": 1516.2,
+      "prev_close": 1471.0
     },
     {
-      "symbol": "MAZDOCK.NS",
-      "pct_change": 2.58,
-      "price": 2061.9,
-      "prev_close": 2010.0
+      "symbol": "LTM.NS",
+      "pct_change": 3.07,
+      "price": 4142.1,
+      "prev_close": 4018.9
     }
   ]
 }
