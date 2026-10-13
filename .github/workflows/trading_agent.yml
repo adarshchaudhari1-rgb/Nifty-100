@@ -1,24 +1,28 @@
 name: Trading Agent
-
+ 
+# One long run per trading day. It starts once (about 9:50 AM IST), then checks
+# the market every 5 minutes until 3:35 PM IST, and posts the daily report at the end.
+# Backup start times are included in case GitHub delays the first one;
+# a late start simply picks up where it should be.
 on:
   schedule:
-    # times are UTC. 04:30 UTC = 10:00 AM IST ... 10:50 UTC = 4:20 PM IST
-    - cron: "30,35,40,45,50,55 4 * * 1-5"
-    - cron: "*/5 5-8 * * 1-5"
-    - cron: "0,5,10,15,20,25,30,35,40,45,50 9 * * 1-5"
+    - cron: "20 4 * * 1-5"     # 9:50 AM IST
+    - cron: "50 4 * * 1-5"     # 10:20 AM IST (backup)
+    - cron: "30 5 * * 1-5"     # 11:00 AM IST (backup)
   workflow_dispatch:
-
+ 
 permissions:
   contents: write
-
+  issues: write
+ 
 concurrency:
   group: trading-agent
   cancel-in-progress: false
-
+ 
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -26,14 +30,35 @@ jobs:
           python-version: "3.11"
           cache: pip
       - run: pip install -r requirements.txt
-      - name: Run agent
+ 
+      - name: Trade all day
         env:
           UPSTOX_ANALYTICS_TOKEN: ${{ secrets.UPSTOX_ANALYTICS_TOKEN }}
-        run: python agent.py
-      - name: Save trades
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "trading-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add trade_log.json daily_watchlist.json || true
-          git diff --cached --quiet || (git commit -m "update trades" && git pull --rebase && git push)
-
+          END=$(date -u -d "10:05" +%s)          # 3:35 PM IST
+          save() {
+            git add trade_log.json daily_watchlist.json 2>/dev/null || true
+            if ! git diff --cached --quiet; then
+              git commit -q -m "update trades"
+              git pull -q --rebase || true
+              git push -q || true
+            fi
+          }
+          while true; do
+            NOW=$(date +%s)
+            if [ "$NOW" -ge "$END" ]; then break; fi
+            python agent.py || true
+            save
+            NOW=$(date +%s)
+            NEXT=$(( (NOW / 300 + 1) * 300 + 20 ))   # next 5-min mark + 20s
+            if [ "$NEXT" -ge "$END" ]; then break; fi
+            sleep $(( NEXT - NOW ))
+          done
+          # final pass + daily report
+          python agent.py || true
+          save
+          python agent.py --report | tee report.txt
+          gh issue comment 1 --body-file report.txt || echo "Could not post to Issue 1 (does it exist?)"
