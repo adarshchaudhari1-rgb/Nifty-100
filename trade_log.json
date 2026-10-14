@@ -6,29 +6,14 @@
       "pattern": "Pullback Breakout",
       "entry": 954.4,
       "initial_sl": 961.8306749999999,
-      "sl": 954.4,
+      "sl": 946.969325,
       "target": 939.5386500000001,
       "risk": 7.430674999999951,
       "qty": 134,
       "position_value": 127889.6,
-      "trail_stage": "breakeven",
-      "entry_time": "2026-10-14 11:05:00+05:30",
-      "last_checked": "2026-10-14 13:05:00+05:30"
-    },
-    "DIVISLAB.NS": {
-      "symbol": "DIVISLAB.NS",
-      "direction": "SHORT",
-      "pattern": "Pullback Breakout",
-      "entry": 9095.5,
-      "initial_sl": 9126.561,
-      "sl": 9064.439,
-      "target": 9033.378,
-      "risk": 31.060999999999694,
-      "qty": 1,
-      "position_value": 9095.5,
       "trail_stage": "locked_1r",
-      "entry_time": "2026-10-14 12:50:00+05:30",
-      "last_checked": "2026-10-14 13:05:00+05:30"
+      "entry_time": "2026-10-14 11:05:00+05:30",
+      "last_checked": "2026-10-14 13:10:00+05:30"
     },
     "POLYCAB.NS": {
       "symbol": "POLYCAB.NS",
@@ -43,7 +28,7 @@
       "position_value": 116046.0,
       "trail_stage": "none",
       "entry_time": "2026-10-14 13:10:00+05:30",
-      "last_checked": "2026-10-14 13:05:00+05:30"
+      "last_checked": "2026-10-14 13:10:00+05:30"
     }
   },
   "closed": [
@@ -88,7 +73,28 @@
       "pnl_pct": 1.9,
       "pnl_rupees": 1993.21,
       "capital_after": 51922.26
+    },
+    {
+      "symbol": "DIVISLAB.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 9095.5,
+      "initial_sl": 9126.561,
+      "sl": 9064.439,
+      "target": 9033.378,
+      "risk": 31.060999999999694,
+      "qty": 1,
+      "position_value": 9095.5,
+      "trail_stage": "locked_1r",
+      "entry_time": "2026-10-14 12:50:00+05:30",
+      "last_checked": "2026-10-14 13:05:00+05:30",
+      "exit_price": 9033.38,
+      "exit_time": "2026-10-14 13:10:00+05:30",
+      "outcome": "TARGET",
+      "pnl_pct": 0.68,
+      "pnl_rupees": 62.12,
+      "capital_after": 51984.38
     }
   ],
-  "capital": 51922.26
+  "capital": 51984.38
 }
