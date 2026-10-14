@@ -1,34 +1,19 @@
 {
   "open": {
-    "CHOLAFIN.NS": {
-      "symbol": "CHOLAFIN.NS",
-      "direction": "SHORT",
-      "pattern": "Pullback Breakout",
-      "entry": 1585.9,
-      "initial_sl": 1601.0001,
-      "sl": 1570.7999000000002,
-      "target": 1555.6998000000003,
-      "risk": 15.100099999999884,
-      "qty": 66,
-      "position_value": 104669.4,
-      "trail_stage": "locked_1r",
-      "entry_time": "2026-10-14 10:10:00+05:30",
-      "last_checked": "2026-10-14 12:55:00+05:30"
-    },
     "SHRIRAMFIN.NS": {
       "symbol": "SHRIRAMFIN.NS",
       "direction": "SHORT",
       "pattern": "Pullback Breakout",
       "entry": 954.4,
       "initial_sl": 961.8306749999999,
-      "sl": 961.8306749999999,
+      "sl": 954.4,
       "target": 939.5386500000001,
       "risk": 7.430674999999951,
       "qty": 134,
       "position_value": 127889.6,
-      "trail_stage": "none",
+      "trail_stage": "breakeven",
       "entry_time": "2026-10-14 11:05:00+05:30",
-      "last_checked": "2026-10-14 12:55:00+05:30"
+      "last_checked": "2026-10-14 13:00:00+05:30"
     },
     "DIVISLAB.NS": {
       "symbol": "DIVISLAB.NS",
@@ -36,14 +21,14 @@
       "pattern": "Pullback Breakout",
       "entry": 9095.5,
       "initial_sl": 9126.561,
-      "sl": 9126.561,
+      "sl": 9064.439,
       "target": 9033.378,
       "risk": 31.060999999999694,
       "qty": 1,
       "position_value": 9095.5,
-      "trail_stage": "none",
+      "trail_stage": "locked_1r",
       "entry_time": "2026-10-14 12:50:00+05:30",
-      "last_checked": "2026-10-14 12:55:00+05:30"
+      "last_checked": "2026-10-14 13:00:00+05:30"
     }
   },
   "closed": [
@@ -67,7 +52,28 @@
       "pnl_pct": -0.41,
       "pnl_rupees": -70.95,
       "capital_after": 49929.05
+    },
+    {
+      "symbol": "CHOLAFIN.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 1585.9,
+      "initial_sl": 1601.0001,
+      "sl": 1570.7999000000002,
+      "target": 1555.6998000000003,
+      "risk": 15.100099999999884,
+      "qty": 66,
+      "position_value": 104669.4,
+      "trail_stage": "locked_1r",
+      "entry_time": "2026-10-14 10:10:00+05:30",
+      "last_checked": "2026-10-14 12:55:00+05:30",
+      "exit_price": 1555.7,
+      "exit_time": "2026-10-14 13:00:00+05:30",
+      "outcome": "TARGET",
+      "pnl_pct": 1.9,
+      "pnl_rupees": 1993.21,
+      "capital_after": 51922.26
     }
   ],
-  "capital": 49929.05
+  "capital": 51922.26
 }
