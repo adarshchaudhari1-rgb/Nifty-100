@@ -1,50 +1,50 @@
 {
-  "date": "2026-10-13",
-  "selected_at": "2026-10-13 12:48:03",
+  "date": "2026-10-14",
+  "selected_at": "2026-10-14 10:00:20",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "TCS.NS": "NSE_EQ|INE467B01029",
-    "HCLTECH.NS": "NSE_EQ|INE860A01027",
-    "HYUNDAI.NS": "NSE_EQ|INE0V6F01027",
-    "TECHM.NS": "NSE_EQ|INE669C01036",
-    "LTM.NS": "NSE_EQ|INE214T01019"
+    "POLYCAB.NS": "NSE_EQ|INE455K01017",
+    "BANKBARODA.NS": "NSE_EQ|INE028A01039",
+    "SHRIRAMFIN.NS": "NSE_EQ|INE721A01047",
+    "CHOLAFIN.NS": "NSE_EQ|INE121A01024",
+    "DIVISLAB.NS": "NSE_EQ|INE361B01024"
   },
   "stocks_with_data": 100,
-  "green": 75,
-  "red": 25,
-  "green_pct": 75.0,
-  "nature": "BULLISH",
+  "green": 42,
+  "red": 58,
+  "green_pct": 42.0,
+  "nature": "BEARISH",
   "stocks": [
     {
-      "symbol": "TCS.NS",
-      "pct_change": 5.23,
-      "price": 2236.2,
-      "prev_close": 2125.0
+      "symbol": "POLYCAB.NS",
+      "pct_change": -4.98,
+      "price": 7877.5,
+      "prev_close": 8290.0
     },
     {
-      "symbol": "HCLTECH.NS",
-      "pct_change": 4.37,
-      "price": 1276.5,
-      "prev_close": 1223.0
+      "symbol": "BANKBARODA.NS",
+      "pct_change": -2.72,
+      "price": 231.95,
+      "prev_close": 238.43
     },
     {
-      "symbol": "HYUNDAI.NS",
-      "pct_change": 3.11,
-      "price": 2001.4,
-      "prev_close": 1941.1
+      "symbol": "SHRIRAMFIN.NS",
+      "pct_change": -2.68,
+      "price": 961.55,
+      "prev_close": 988.0
     },
     {
-      "symbol": "TECHM.NS",
-      "pct_change": 3.07,
-      "price": 1516.2,
-      "prev_close": 1471.0
+      "symbol": "CHOLAFIN.NS",
+      "pct_change": -1.7,
+      "price": 1593.1,
+      "prev_close": 1620.7
     },
     {
-      "symbol": "LTM.NS",
-      "pct_change": 3.07,
-      "price": 4142.1,
-      "prev_close": 4018.9
+      "symbol": "DIVISLAB.NS",
+      "pct_change": -1.51,
+      "price": 9145.0,
+      "prev_close": 9285.0
     }
   ]
 }
