@@ -13,7 +13,7 @@
       "position_value": 104669.4,
       "trail_stage": "breakeven",
       "entry_time": "2026-10-14 10:10:00+05:30",
-      "last_checked": "2026-10-14 11:50:00+05:30"
+      "last_checked": "2026-10-14 11:55:00+05:30"
     },
     "SHRIRAMFIN.NS": {
       "symbol": "SHRIRAMFIN.NS",
@@ -28,9 +28,11 @@
       "position_value": 127889.6,
       "trail_stage": "none",
       "entry_time": "2026-10-14 11:05:00+05:30",
-      "last_checked": "2026-10-14 11:50:00+05:30"
-    },
-    "BANKBARODA.NS": {
+      "last_checked": "2026-10-14 11:55:00+05:30"
+    }
+  },
+  "closed": [
+    {
       "symbol": "BANKBARODA.NS",
       "direction": "SHORT",
       "pattern": "Range Breakout",
@@ -43,9 +45,14 @@
       "position_value": 17328.75,
       "trail_stage": "none",
       "entry_time": "2026-10-14 11:30:00+05:30",
-      "last_checked": "2026-10-14 11:50:00+05:30"
+      "last_checked": "2026-10-14 11:50:00+05:30",
+      "exit_price": 232.0,
+      "exit_time": "2026-10-14 11:55:00+05:30",
+      "outcome": "SL",
+      "pnl_pct": -0.41,
+      "pnl_rupees": -70.95,
+      "capital_after": 49929.05
     }
-  },
-  "closed": [],
-  "capital": 50000
+  ],
+  "capital": 49929.05
 }
