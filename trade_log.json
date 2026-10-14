@@ -13,7 +13,7 @@
       "position_value": 127889.6,
       "trail_stage": "breakeven",
       "entry_time": "2026-10-14 11:05:00+05:30",
-      "last_checked": "2026-10-14 13:00:00+05:30"
+      "last_checked": "2026-10-14 13:05:00+05:30"
     },
     "DIVISLAB.NS": {
       "symbol": "DIVISLAB.NS",
@@ -28,7 +28,22 @@
       "position_value": 9095.5,
       "trail_stage": "locked_1r",
       "entry_time": "2026-10-14 12:50:00+05:30",
-      "last_checked": "2026-10-14 13:00:00+05:30"
+      "last_checked": "2026-10-14 13:05:00+05:30"
+    },
+    "POLYCAB.NS": {
+      "symbol": "POLYCAB.NS",
+      "direction": "SHORT",
+      "pattern": "Range Breakout",
+      "entry": 8289.0,
+      "initial_sl": 8337.66675,
+      "sl": 8337.66675,
+      "target": 8191.666499999999,
+      "risk": 48.66675000000032,
+      "qty": 14,
+      "position_value": 116046.0,
+      "trail_stage": "none",
+      "entry_time": "2026-10-14 13:10:00+05:30",
+      "last_checked": "2026-10-14 13:05:00+05:30"
     }
   },
   "closed": [
