@@ -13,7 +13,7 @@
       "position_value": 104669.4,
       "trail_stage": "locked_1r",
       "entry_time": "2026-10-14 10:10:00+05:30",
-      "last_checked": "2026-10-14 12:40:00+05:30"
+      "last_checked": "2026-10-14 12:45:00+05:30"
     },
     "SHRIRAMFIN.NS": {
       "symbol": "SHRIRAMFIN.NS",
@@ -28,7 +28,22 @@
       "position_value": 127889.6,
       "trail_stage": "none",
       "entry_time": "2026-10-14 11:05:00+05:30",
-      "last_checked": "2026-10-14 12:40:00+05:30"
+      "last_checked": "2026-10-14 12:45:00+05:30"
+    },
+    "DIVISLAB.NS": {
+      "symbol": "DIVISLAB.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 9095.5,
+      "initial_sl": 9126.561,
+      "sl": 9126.561,
+      "target": 9033.378,
+      "risk": 31.060999999999694,
+      "qty": 1,
+      "position_value": 9095.5,
+      "trail_stage": "none",
+      "entry_time": "2026-10-14 12:50:00+05:30",
+      "last_checked": "2026-10-14 12:45:00+05:30"
     }
   },
   "closed": [
