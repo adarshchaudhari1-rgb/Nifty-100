@@ -1,21 +1,5 @@
 {
-  "open": {
-    "POLYCAB.NS": {
-      "symbol": "POLYCAB.NS",
-      "direction": "SHORT",
-      "pattern": "Range Breakout",
-      "entry": 8289.0,
-      "initial_sl": 8337.66675,
-      "sl": 8337.66675,
-      "target": 8191.666499999999,
-      "risk": 48.66675000000032,
-      "qty": 14,
-      "position_value": 116046.0,
-      "trail_stage": "none",
-      "entry_time": "2026-10-14 13:10:00+05:30",
-      "last_checked": "2026-10-14 13:40:00+05:30"
-    }
-  },
+  "open": {},
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
@@ -100,7 +84,28 @@
       "pnl_pct": 0.78,
       "pnl_rupees": 995.71,
       "capital_after": 52980.09
+    },
+    {
+      "symbol": "POLYCAB.NS",
+      "direction": "SHORT",
+      "pattern": "Range Breakout",
+      "entry": 8289.0,
+      "initial_sl": 8337.66675,
+      "sl": 8337.66675,
+      "target": 8191.666499999999,
+      "risk": 48.66675000000032,
+      "qty": 14,
+      "position_value": 116046.0,
+      "trail_stage": "none",
+      "entry_time": "2026-10-14 13:10:00+05:30",
+      "last_checked": "2026-10-14 13:40:00+05:30",
+      "exit_price": 8337.67,
+      "exit_time": "2026-10-14 13:45:00+05:30",
+      "outcome": "SL",
+      "pnl_pct": -0.59,
+      "pnl_rupees": -681.33,
+      "capital_after": 52298.76
     }
   ],
-  "capital": 52980.09
+  "capital": 52298.76
 }
