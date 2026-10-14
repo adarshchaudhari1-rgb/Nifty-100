@@ -13,7 +13,22 @@
       "position_value": 104669.4,
       "trail_stage": "none",
       "entry_time": "2026-10-14 10:10:00+05:30",
-      "last_checked": "2026-10-14 10:55:00+05:30"
+      "last_checked": "2026-10-14 11:00:00+05:30"
+    },
+    "SHRIRAMFIN.NS": {
+      "symbol": "SHRIRAMFIN.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 954.4,
+      "initial_sl": 961.8306749999999,
+      "sl": 961.8306749999999,
+      "target": 939.5386500000001,
+      "risk": 7.430674999999951,
+      "qty": 134,
+      "position_value": 127889.6,
+      "trail_stage": "none",
+      "entry_time": "2026-10-14 11:05:00+05:30",
+      "last_checked": "2026-10-14 11:00:00+05:30"
     }
   },
   "closed": [],
