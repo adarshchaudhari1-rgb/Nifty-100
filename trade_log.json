@@ -6,14 +6,14 @@
       "pattern": "Pullback Breakout",
       "entry": 1585.9,
       "initial_sl": 1601.0001,
-      "sl": 1601.0001,
+      "sl": 1585.9,
       "target": 1555.6998000000003,
       "risk": 15.100099999999884,
       "qty": 66,
       "position_value": 104669.4,
-      "trail_stage": "none",
+      "trail_stage": "breakeven",
       "entry_time": "2026-10-14 10:10:00+05:30",
-      "last_checked": "2026-10-14 11:25:00+05:30"
+      "last_checked": "2026-10-14 11:30:00+05:30"
     },
     "SHRIRAMFIN.NS": {
       "symbol": "SHRIRAMFIN.NS",
@@ -28,7 +28,7 @@
       "position_value": 127889.6,
       "trail_stage": "none",
       "entry_time": "2026-10-14 11:05:00+05:30",
-      "last_checked": "2026-10-14 11:25:00+05:30"
+      "last_checked": "2026-10-14 11:30:00+05:30"
     },
     "BANKBARODA.NS": {
       "symbol": "BANKBARODA.NS",
@@ -43,7 +43,7 @@
       "position_value": 17328.75,
       "trail_stage": "none",
       "entry_time": "2026-10-14 11:30:00+05:30",
-      "last_checked": "2026-10-14 11:25:00+05:30"
+      "last_checked": "2026-10-14 11:30:00+05:30"
     }
   },
   "closed": [],
