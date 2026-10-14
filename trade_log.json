@@ -1,20 +1,5 @@
 {
   "open": {
-    "SHRIRAMFIN.NS": {
-      "symbol": "SHRIRAMFIN.NS",
-      "direction": "SHORT",
-      "pattern": "Pullback Breakout",
-      "entry": 954.4,
-      "initial_sl": 961.8306749999999,
-      "sl": 946.969325,
-      "target": 939.5386500000001,
-      "risk": 7.430674999999951,
-      "qty": 134,
-      "position_value": 127889.6,
-      "trail_stage": "locked_1r",
-      "entry_time": "2026-10-14 11:05:00+05:30",
-      "last_checked": "2026-10-14 13:15:00+05:30"
-    },
     "POLYCAB.NS": {
       "symbol": "POLYCAB.NS",
       "direction": "SHORT",
@@ -28,7 +13,7 @@
       "position_value": 116046.0,
       "trail_stage": "none",
       "entry_time": "2026-10-14 13:10:00+05:30",
-      "last_checked": "2026-10-14 13:15:00+05:30"
+      "last_checked": "2026-10-14 13:20:00+05:30"
     }
   },
   "closed": [
@@ -94,7 +79,28 @@
       "pnl_pct": 0.68,
       "pnl_rupees": 62.12,
       "capital_after": 51984.38
+    },
+    {
+      "symbol": "SHRIRAMFIN.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 954.4,
+      "initial_sl": 961.8306749999999,
+      "sl": 946.969325,
+      "target": 939.5386500000001,
+      "risk": 7.430674999999951,
+      "qty": 134,
+      "position_value": 127889.6,
+      "trail_stage": "locked_1r",
+      "entry_time": "2026-10-14 11:05:00+05:30",
+      "last_checked": "2026-10-14 13:15:00+05:30",
+      "exit_price": 946.97,
+      "exit_time": "2026-10-14 13:20:00+05:30",
+      "outcome": "TRAILED_SL",
+      "pnl_pct": 0.78,
+      "pnl_rupees": 995.71,
+      "capital_after": 52980.09
     }
   ],
-  "capital": 51984.38
+  "capital": 52980.09
 }
