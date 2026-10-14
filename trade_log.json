@@ -1,1 +1,21 @@
-{}
+{
+  "open": {
+    "CHOLAFIN.NS": {
+      "symbol": "CHOLAFIN.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 1585.9,
+      "initial_sl": 1601.0001,
+      "sl": 1601.0001,
+      "target": 1555.6998000000003,
+      "risk": 15.100099999999884,
+      "qty": 66,
+      "position_value": 104669.4,
+      "trail_stage": "none",
+      "entry_time": "2026-10-14 10:10:00+05:30",
+      "last_checked": "2026-10-14 10:05:00+05:30"
+    }
+  },
+  "closed": [],
+  "capital": 50000
+}
