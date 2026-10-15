@@ -96,7 +96,8 @@ def run_once(now=None) -> None:
     if not symbols:
         return
 
-    direction = "LONG" if wl["nature"] == "BULLISH" else "SHORT"
+    default_side = "LONG" if wl["nature"] == "BULLISH" else "SHORT"
+    side_of = {s["symbol"]: s.get("side", default_side) for s in wl["stocks"]}   # LONG or SHORT per stock
     status = trader.daily_risk_status(today_str)
     if status["halted"]:
         print(f"NO NEW TRADES TODAY: {status['reason']}")
@@ -123,6 +124,7 @@ def run_once(now=None) -> None:
         if now.time() >= config.SQUARE_OFF_TIME:
             continue
 
+        direction = side_of.get(sym, default_side)
         setups = strategy.find_setups(df, direction)
         print(f"[{name}] {len(setups)} {direction} setup(s) so far today "
               f"(last completed candle {df.index[-1]:%H:%M})")
@@ -133,8 +135,9 @@ def run_once(now=None) -> None:
             continue                                   # too old to act on
 
         buying_power = trader.capital * config.LEVERAGE - trader.open_position_value()
+        risk_now = trader.daily_risk_status(today_str)["risk_per_trade"]
         qty = calculate_quantity(setup["entry"], setup["sl"], capital=trader.capital,
-                                 max_position_value=buying_power)
+                                 risk_amount=risk_now, max_position_value=buying_power)
         if qty <= 0:
             print(f"[{name}] setup found but quantity is 0 (no buying power / SL too wide) - skipped")
             continue
@@ -142,7 +145,7 @@ def run_once(now=None) -> None:
         trade = trader.open_trade(sym, setup, qty=qty)
         print(f"[{name}] OPENED {trade['direction']} ({trade['pattern']}, {setup['zone_candles']}-candle zone) "
               f"qty {trade['qty']} @ {trade['entry']:.2f} (Rs {trade['position_value']:.0f}) | "
-              f"SL {trade['sl']:.2f} ({setup['risk_pct']}%) | Target {trade['target']:.2f}")
+              f"SL {trade['sl']:.2f} ({setup['risk_pct']}%) | Target {trade['target']:.2f} | risk Rs {risk_now}")
         manage_open_trade(trader, sym, df, now)        # catch up on candles after the setup candle
 
 
