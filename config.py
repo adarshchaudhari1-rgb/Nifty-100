@@ -14,17 +14,19 @@ LEVERAGE = 5                   # total open position value is capped at capital 
 DAILY_LOSS_LIMIT = 2_000       # stop opening new trades once the day's realized loss hits this
 PROFIT_TRAIL_TRIGGER = 2_000   # once the day's profit reaches this, start trailing it
 PROFIT_TRAIL_RISK = 500        # ...and stop for the day if profit falls this far below its peak
+RISK_AFTER_TARGET = 500        # once the day's profit has reached PROFIT_TRAIL_TRIGGER, risk only this much per trade
 
 # ---------------- Daily timeline ----------------
 SELECTION_TIME = dtime(10, 0)   # market-nature scan + top-5 selection uses prices as of this time
-LAST_ENTRY_TIME = dtime(14, 45) # no new entries from candles starting after this
+LAST_ENTRY_TIME = dtime(13, 55) # last candle that may trigger an entry starts 1:55 PM (closes 2:00 PM) -> no new trades after 2 PM
 SQUARE_OFF_TIME = dtime(15, 15) # any trade still open is closed at this time (intraday leverage)
 
 # ---------------- Market nature (Nifty 100 breadth) ----------------
 BULLISH_MIN_GREEN_PCT = 55      # green stocks >= this % of (green + red)  -> BULLISH day
 BEARISH_MAX_GREEN_PCT = 45      # green stocks <= this %                    -> BEARISH day
                                 # anything in between                      -> NEUTRAL, no trades
-TOP_N = 5                       # how many stocks to watch
+TOP_N = 5                       # how many stocks to watch (per side)
+NEUTRAL_TRADES_BOTH_SIDES = True  # on a NEUTRAL day, watch the TOP_N gainers (longs) AND the TOP_N losers (shorts)
 MIN_STOCKS_WITH_DATA = 80       # abort selection if fewer than this many stocks returned data
 
 # ---------------- Pullback / range breakout setup (5-min candles) ----------------
