@@ -192,8 +192,11 @@ class PaperTrader:
             halted = True
             reason = (f"Profit trail stop hit (peak Rs {peak:.0f}, now Rs {running:.0f}, "
                       f"trail level Rs {peak - config.PROFIT_TRAIL_RISK:.0f})")
+        # Once the day's profit has reached the trigger, every new trade risks less
+        risk_per_trade = (config.RISK_AFTER_TARGET if peak >= config.PROFIT_TRAIL_TRIGGER
+                          else config.RISK_PER_TRADE)
         return {"date": date, "running_pnl": round(running, 2), "peak_pnl": round(peak, 2),
-                "halted": halted, "reason": reason}
+                "halted": halted, "reason": reason, "risk_per_trade": risk_per_trade}
 
     def daily_summary(self, date: str = None) -> dict:
         date = date or _today_str()
