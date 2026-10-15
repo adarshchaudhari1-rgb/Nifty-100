@@ -52,9 +52,14 @@ def build_watchlist(rows: list, today_str: str, source: str, selected_at: str,
 
     ranked = sorted(rows, key=lambda r: r["pct_change"], reverse=True)
     if nature == "BULLISH":
-        picks = ranked[:config.TOP_N]
+        picks = [dict(r, side="LONG") for r in ranked[:config.TOP_N]]
     elif nature == "BEARISH":
-        picks = list(reversed(ranked))[:config.TOP_N]
+        picks = [dict(r, side="SHORT") for r in list(reversed(ranked))[:config.TOP_N]]
+    elif config.NEUTRAL_TRADES_BOTH_SIDES:
+        # No clear direction: watch the strongest stocks for longs and the weakest for shorts
+        longs = [dict(r, side="LONG") for r in ranked[:config.TOP_N]]
+        shorts = [dict(r, side="SHORT") for r in list(reversed(ranked))[:config.TOP_N]]
+        picks = longs + shorts
     else:
         picks = []
 
@@ -69,7 +74,7 @@ def build_watchlist(rows: list, today_str: str, source: str, selected_at: str,
         "red": red,
         "green_pct": green_pct,
         "nature": nature,
-        "stocks": [{"symbol": r["symbol"], "pct_change": round(r["pct_change"], 2),
+        "stocks": [{"symbol": r["symbol"], "side": r["side"], "pct_change": round(r["pct_change"], 2),
                     "price": round(r["price"], 2), "prev_close": round(r["prev_close"], 2)}
                    for r in picks],
     }
@@ -122,5 +127,10 @@ def describe(wl: dict) -> str:
             f"[data: {wl.get('data_source', 'Yahoo Finance')}]")
     if not wl["stocks"]:
         return head + " -> no trades today (market not clearly directional)"
-    picks = ", ".join(f"{s['symbol'].replace('.NS', '')} {s['pct_change']:+.2f}%" for s in wl["stocks"])
-    return head + f"\nWatching: {picks}"
+    def fmt(side):
+        return ", ".join(f"{x['symbol'].replace('.NS', '')} {x['pct_change']:+.2f}%"
+                         for x in wl["stocks"] if x.get("side", "LONG" if wl["nature"] == "BULLISH" else "SHORT") == side)
+    longs, shorts = fmt("LONG"), fmt("SHORT")
+    if longs and shorts:
+        return head + f"\nWatching for LONGS: {longs}\nWatching for SHORTS: {shorts}"
+    return head + f"\nWatching: {longs or shorts}"
