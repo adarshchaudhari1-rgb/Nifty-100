@@ -250,7 +250,7 @@ function render(log, wl, run) {
   const wlToday = wl && wl.date === today ? wl : null;
   ban.hidden = true; ban.className = "banner";
   if (st.halted) { ban.hidden = false; ban.classList.add("down"); ban.textContent = "No new trades today. " + st.reason + "."; }
-  else if (wlToday && wlToday.nature === "NEUTRAL") { ban.hidden = false; ban.textContent = `No trades today. The market is not clearly bullish or bearish (${wlToday.green_pct}% of stocks green).`; }
+  else if (wlToday && wlToday.nature === "NEUTRAL") { ban.hidden = false; ban.textContent = wlToday.stocks.length ? `Mixed market (${wlToday.green_pct}% of stocks green). Watching the top gainers for longs and the top losers for shorts.` : `No trades today. The market is not clearly bullish or bearish (${wlToday.green_pct}% of stocks green).`; }
   else if (!wlToday) { ban.hidden = false; ban.textContent = "Today's stock selection has not run yet. It happens at 10:00 AM."; }
 
   /* stats */
@@ -274,9 +274,10 @@ function render(log, wl, run) {
       <div class="breadth"><div class="g" style="width:${gp}%"></div><div class="r" style="width:${100 - gp}%"></div></div>
       <div class="breadth-lbl"><span class="up num">${wlToday.green} green</span><span class="down num">${wlToday.red} red</span></div>`;
     $("watch").innerHTML = wlToday.stocks.length
-      ? table([["Stock"], ["Move", "r"], ["Price", "r"]], wlToday.stocks.map((s) =>
-          `<tr><td class="sym">${esc(name(s.symbol))}</td><td class="r num ${cls(s.pct_change)}">${s.pct_change > 0 ? "+" : ""}${s.pct_change.toFixed(2)}%</td><td class="r num">${s.price.toLocaleString("en-IN")}</td></tr>`))
-      : `<div class="empty">No stocks today. The agent only trades on a clearly bullish or bearish day.</div>`;
+      ? table([["Stock"], ["Side"], ["Move", "r"], ["Price", "r"]], wlToday.stocks.map((s) => {
+          const side = s.side || (wlToday.nature === "BULLISH" ? "LONG" : "SHORT");
+          return `<tr><td class="sym">${esc(name(s.symbol))}</td><td><span class="chip ${side === "SHORT" ? "short" : "long"}">${esc(side)}</span></td><td class="r num ${cls(s.pct_change)}">${s.pct_change > 0 ? "+" : ""}${s.pct_change.toFixed(2)}%</td><td class="r num">${s.price.toLocaleString("en-IN")}</td></tr>`; }))
+      : `<div class="empty">No stocks today. The agent found no stocks to watch today.</div>`;
   } else {
     $("market").innerHTML = `<div class="empty">No selection for ${esc(today)} yet.</div>`;
     $("watch").innerHTML = `<div class="empty">Nothing to watch yet.</div>`;
