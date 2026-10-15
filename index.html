@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nifty 100 Agent</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Layout: one header strip, a row of day figures, then watchlist, open trades, today's trades, history. */
+  :root {
+    --bg: #f3f5f4;
+    --surface: #ffffff;
+    --surface-2: #eaeeec;
+    --line: #d6ddda;
+    --fg: #16201c;
+    --muted: #5d6b65;
+    --up: #0b7a4b;
+    --up-bg: #dcf1e5;
+    --down: #b3261e;
+    --down-bg: #f8dedb;
+    --warn: #8a5a00;
+    --warn-bg: #f6e8c8;
+    --accent: #1b5e8c;
+    --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1513; --surface: #171e1b; --surface-2: #202925; --line: #2c3631;
+      --fg: #e6ede9; --muted: #92a199;
+      --up: #4cc98a; --up-bg: #123524; --down: #ff7b72; --down-bg: #3b1a18;
+      --warn: #e5b94d; --warn-bg: #3a2f10; --accent: #6db3e3;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1513; --surface: #171e1b; --surface-2: #202925; --line: #2c3631;
+    --fg: #e6ede9; --muted: #92a199;
+    --up: #4cc98a; --up-bg: #123524; --down: #ff7b72; --down-bg: #3b1a18;
+    --warn: #e5b94d; --warn-bg: #3a2f10; --accent: #6db3e3;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 14px/1.45 var(--sans);
+    padding-block: 16px 40px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; display: grid; gap: 16px; }
+  .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  .up { color: var(--up); } .down { color: var(--down); } .muted { color: var(--muted); }
+
+  header { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; justify-content: space-between; }
+  h1 { font-size: 18px; margin: 0; font-weight: 600; letter-spacing: .01em; }
+  .sub { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .hdr-right { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+  .pill { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+          font-size: 12px; font-weight: 500; background: var(--surface-2); color: var(--muted); border: 1px solid var(--line); }
+  .pill.up { background: var(--up-bg); color: var(--up); border-color: transparent; }
+  .pill.down { background: var(--down-bg); color: var(--down); border-color: transparent; }
+  .pill.warn { background: var(--warn-bg); color: var(--warn); border-color: transparent; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+  .pulse .dot { animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity: .25; } }
+  @media (prefers-reduced-motion: reduce) { .pulse .dot { animation: none; } }
+  button { font: inherit; color: var(--fg); background: var(--surface); border: 1px solid var(--line);
+           border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+  button:hover { background: var(--surface-2); }
+  button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .banner { padding: 10px 14px; border-radius: 10px; background: var(--warn-bg); color: var(--warn); font-size: 13px; }
+  .banner.down { background: var(--down-bg); color: var(--down); }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+  .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; min-width: 0; }
+  .stat .k { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .stat .v { font-size: 22px; font-weight: 600; margin-top: 4px; }
+  .stat .s { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  section { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; min-width: 0; }
+  h2 { font-size: 12px; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; font-weight: 600; }
+
+  .breadth { display: flex; height: 10px; border-radius: 6px; overflow: hidden; background: var(--surface-2); margin: 8px 0 6px; }
+  .breadth .g { background: var(--up); } .breadth .r { background: var(--down); }
+  .breadth-lbl { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
+
+  .scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; font-size: 11px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted);
+       font-weight: 500; padding: 6px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  td { padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  tr:last-child td { border-bottom: 0; }
+  td.r, th.r { text-align: right; }
+  .sym { font-weight: 600; }
+  .chip { display: inline-block; padding: 1px 8px; border-radius: 6px; font-size: 11px; font-weight: 600; }
+  .chip.short { background: var(--down-bg); color: var(--down); }
+  .chip.long { background: var(--up-bg); color: var(--up); }
+  .chip.stage { background: var(--surface-2); color: var(--muted); font-weight: 500; }
+  .chip.stage.safe { background: var(--up-bg); color: var(--up); }
+  .empty { color: var(--muted); padding: 6px 2px; }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+  @media (max-width: 760px) { .two { grid-template-columns: 1fr; } }
+  .foot { color: var(--muted); font-size: 12px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Nifty 100 Agent</h1>
+      <div class="sub" id="sub">Paper trading &middot; loading&hellip;</div>
+    </div>
+    <div class="hdr-right">
+      <span class="pill" id="agentPill"><span class="dot"></span><span id="agentTxt">Checking agent</span></span>
+      <button id="refresh" type="button">Refresh</button>
+    </div>
+  </header>
+
+  <div id="banner" class="banner" hidden></div>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="two">
+    <section>
+      <h2>Market at 10:00</h2>
+      <div id="market"><div class="empty">Waiting for data&hellip;</div></div>
+    </section>
+    <section>
+      <h2>Watchlist</h2>
+      <div id="watch"><div class="empty">Waiting for data&hellip;</div></div>
+    </section>
+  </div>
+
+  <section>
+    <h2>Open trades</h2>
+    <div class="scroll" id="open"></div>
+  </section>
+
+  <section>
+    <h2>Closed today</h2>
+    <div class="scroll" id="closed"></div>
+  </section>
+
+  <section>
+    <h2>Day by day</h2>
+    <div class="scroll" id="days"></div>
+  </section>
+
+  <div class="foot" id="foot"></div>
+</div>
+
+<script>
+/* ---- Settings: change only if your repo or limits change ---- */
+const OWNER = "adarshchaudhari1-rgb", REPO = "Nifty-100", BRANCH = "main";
+const STARTING_CAPITAL = 50000;
+const DAILY_LOSS_LIMIT = 2000, PROFIT_TRAIL_TRIGGER = 2000, PROFIT_TRAIL_RISK = 500;
+const RISK_PER_TRADE = 1000, RISK_AFTER_TARGET = 500;
+const REFRESH_MS = 4 * 60 * 1000;   /* 45 GitHub API calls an hour, under the free 60 */
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const inr = (n, d = 0) => (n < 0 ? "-" : "") + "₹" + Math.abs(n).toLocaleString("en-IN", { minimumFractionDigits: d, maximumFractionDigits: d });
+const sgn = (n, d = 0) => (n > 0 ? "+" : n < 0 ? "-" : "") + "₹" + Math.abs(n).toLocaleString("en-IN", { minimumFractionDigits: d, maximumFractionDigits: d });
+const cls = (n) => (n > 0 ? "up" : n < 0 ? "down" : "muted");
+const name = (s) => String(s).replace(/\.NS$/, "");
+const hhmm = (t) => String(t || "").slice(11, 16);
+const dateOf = (t) => String(t || "").slice(0, 10);
+
+function istToday() {
+  const f = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit" });
+  return f.format(new Date());
+}
+
+async function getFile(path) {
+  const api = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${path}?ref=${BRANCH}`;
+  try {
+    const r = await fetch(api, { headers: { Accept: "application/vnd.github.raw+json" }, cache: "no-store" });
+    if (r.ok) return await r.json();
+  } catch (e) { /* fall through to the raw host */ }
+  const raw = `https://raw.githubusercontent.com/${OWNER}/${REPO}/${BRANCH}/${path}?t=${Date.now()}`;
+  const r2 = await fetch(raw, { cache: "no-store" });
+  if (!r2.ok) throw new Error(path + " " + r2.status);
+  return await r2.json();
+}
+
+async function getAgentRun() {
+  try {
+    const r = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/actions/runs?per_page=6`, { cache: "no-store" });
+    if (!r.ok) return null;
+    const j = await r.json();
+    return (j.workflow_runs || []).find((x) => x.name === "Trading Agent") || null;
+  } catch (e) { return null; }
+}
+
+/* Mirrors the agent's own day-status rules (paper_trader.daily_risk_status) */
+function dayStatus(todays) {
+  let running = 0, peak = 0;
+  [...todays].sort((a, b) => String(a.exit_time).localeCompare(String(b.exit_time))).forEach((t) => {
+    running += t.pnl_rupees; peak = Math.max(peak, running);
+  });
+  let halted = false, reason = "";
+  if (running <= -DAILY_LOSS_LIMIT) { halted = true; reason = "Daily loss limit reached"; }
+  else if (peak >= PROFIT_TRAIL_TRIGGER && running <= peak - PROFIT_TRAIL_RISK) { halted = true; reason = "Profit trail hit. Done for the day"; }
+  return { running, peak, halted, reason, risk: peak >= PROFIT_TRAIL_TRIGGER ? RISK_AFTER_TARGET : RISK_PER_TRADE };
+}
+
+function stageLabel(t) {
+  const s = t.trail_stage || "none";
+  if (s === "none") return ["SL at start", false];
+  if (/break/i.test(s)) return ["SL at entry", true];
+  return ["Profit locked", true];
+}
+
+function table(head, rows) {
+  if (!rows.length) return "";
+  return `<table><thead><tr>${head.map((h) => `<th class="${h[1] || ""}">${esc(h[0])}</th>`).join("")}</tr></thead><tbody>${rows.join("")}</tbody></table>`;
+}
+
+function render(log, wl, run) {
+  const today = istToday();
+  const open = Array.isArray(log.open) ? log.open : Object.values(log.open || {});
+  const closed = log.closed || [];
+  const todays = closed.filter((t) => dateOf(t.exit_time) === today);
+  const st = dayStatus(todays);
+  const wins = todays.filter((t) => t.pnl_rupees > 0).length;
+  const capital = typeof log.capital === "number" ? log.capital : STARTING_CAPITAL;
+
+  $("sub").textContent = `Paper trading · ${today} · Rs ${STARTING_CAPITAL.toLocaleString("en-IN")} starting capital`;
+
+  /* agent pill */
+  const pill = $("agentPill");
+  pill.className = "pill";
+  if (run && (run.status === "in_progress" || run.status === "queued")) {
+    pill.classList.add("up", "pulse");
+    $("agentTxt").textContent = "Agent running since " + new Date(run.created_at).toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", timeZone: "Asia/Kolkata" });
+  } else if (run) {
+    $("agentTxt").textContent = "Agent idle · last run " + new Date(run.created_at).toLocaleString("en-IN", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "Asia/Kolkata" });
+  } else {
+    $("agentTxt").textContent = "Agent status unknown";
+  }
+
+  /* banner */
+  const ban = $("banner");
+  const wlToday = wl && wl.date === today ? wl : null;
+  ban.hidden = true; ban.className = "banner";
+  if (st.halted) { ban.hidden = false; ban.classList.add("down"); ban.textContent = "No new trades today. " + st.reason + "."; }
+  else if (wlToday && wlToday.nature === "NEUTRAL") { ban.hidden = false; ban.textContent = `No trades today. The market is not clearly bullish or bearish (${wlToday.green_pct}% of stocks green).`; }
+  else if (!wlToday) { ban.hidden = false; ban.textContent = "Today's stock selection has not run yet. It happens at 10:00 AM."; }
+
+  /* stats */
+  const allPnl = closed.reduce((a, t) => a + t.pnl_rupees, 0);
+  $("stats").innerHTML = [
+    ["Today's profit", `<span class="num ${cls(st.running)}">${sgn(st.running)}</span>`, st.peak > 0 ? `Peak ${sgn(st.peak)}` : "Closed trades only"],
+    ["Capital", `<span class="num">${inr(capital)}</span>`, `${sgn(capital - STARTING_CAPITAL)} overall`],
+    ["Trades today", `<span class="num">${todays.length}</span>`, `${wins} won · ${todays.length - wins} lost · ${open.length} open`],
+    ["Risk per trade", `<span class="num">${inr(st.risk)}</span>`, st.risk === RISK_AFTER_TARGET ? "Reduced after ₹2,000 profit" : "Normal size"],
+    ["All time", `<span class="num ${cls(allPnl)}">${sgn(allPnl)}</span>`, `${closed.length} closed trades`],
+  ].map(([k, v, s]) => `<div class="stat"><div class="k">${k}</div><div class="v">${v}</div><div class="s">${s}</div></div>`).join("");
+
+  /* market + watchlist */
+  if (wlToday) {
+    const tot = wlToday.green + wlToday.red;
+    const gp = tot ? (wlToday.green / tot) * 100 : 0;
+    const tone = wlToday.nature === "BULLISH" ? "up" : wlToday.nature === "BEARISH" ? "down" : "warn";
+    $("market").innerHTML = `
+      <div><span class="pill ${tone}">${esc(wlToday.nature)}</span>
+      <span class="muted" style="margin-left:8px">picked at ${esc(hhmm(wlToday.selected_at))} · ${esc(wlToday.data_source || "")}</span></div>
+      <div class="breadth"><div class="g" style="width:${gp}%"></div><div class="r" style="width:${100 - gp}%"></div></div>
+      <div class="breadth-lbl"><span class="up num">${wlToday.green} green</span><span class="down num">${wlToday.red} red</span></div>`;
+    $("watch").innerHTML = wlToday.stocks.length
+      ? table([["Stock"], ["Move", "r"], ["Price", "r"]], wlToday.stocks.map((s) =>
+          `<tr><td class="sym">${esc(name(s.symbol))}</td><td class="r num ${cls(s.pct_change)}">${s.pct_change > 0 ? "+" : ""}${s.pct_change.toFixed(2)}%</td><td class="r num">${s.price.toLocaleString("en-IN")}</td></tr>`))
+      : `<div class="empty">No stocks today. The agent only trades on a clearly bullish or bearish day.</div>`;
+  } else {
+    $("market").innerHTML = `<div class="empty">No selection for ${esc(today)} yet.</div>`;
+    $("watch").innerHTML = `<div class="empty">Nothing to watch yet.</div>`;
+  }
+
+  /* open trades */
+  $("open").innerHTML = open.length
+    ? table([["Stock"], ["Side"], ["Since"], ["Entry", "r"], ["Stop-loss", "r"], ["Target", "r"], ["Qty", "r"], ["SL status"]],
+        open.map((t) => {
+          const [lab, safe] = stageLabel(t);
+          return `<tr><td class="sym">${esc(name(t.symbol))}</td><td><span class="chip ${t.direction === "SHORT" ? "short" : "long"}">${esc(t.direction)}</span></td>
+          <td class="num">${esc(hhmm(t.entry_time))}</td><td class="r num">${t.entry.toFixed(2)}</td><td class="r num">${t.sl.toFixed(2)}</td>
+          <td class="r num">${t.target.toFixed(2)}</td><td class="r num">${t.qty}</td><td><span class="chip stage ${safe ? "safe" : ""}">${lab}</span></td></tr>`;
+        }))
+    : `<div class="empty">No open trades.</div>`;
+
+  /* closed today */
+  $("closed").innerHTML = todays.length
+    ? table([["Stock"], ["Side"], ["In"], ["Out"], ["Entry", "r"], ["Exit", "r"], ["Qty", "r"], ["Result"], ["Profit", "r"]],
+        [...todays].sort((a, b) => String(a.entry_time).localeCompare(String(b.entry_time))).map((t) =>
+          `<tr><td class="sym">${esc(name(t.symbol))}</td><td><span class="chip ${t.direction === "SHORT" ? "short" : "long"}">${esc(t.direction)}</span></td>
+          <td class="num">${esc(hhmm(t.entry_time))}</td><td class="num">${esc(hhmm(t.exit_time))}</td>
+          <td class="r num">${t.entry.toFixed(2)}</td><td class="r num">${t.exit_price.toFixed(2)}</td><td class="r num">${t.qty}</td>
+          <td><span class="chip stage">${esc(String(t.outcome).replace(/_/g, " ").toLowerCase())}</span></td>
+          <td class="r num ${cls(t.pnl_rupees)}">${sgn(t.pnl_rupees, 2)}</td></tr>`))
+    : `<div class="empty">No closed trades today.</div>`;
+
+  /* day by day */
+  const byDay = {};
+  closed.forEach((t) => {
+    const d = dateOf(t.exit_time); const o = byDay[d] || (byDay[d] = { n: 0, w: 0, p: 0 });
+    o.n++; if (t.pnl_rupees > 0) o.w++; o.p += t.pnl_rupees;
+  });
+  const days = Object.keys(byDay).sort().reverse().slice(0, 30);
+  $("days").innerHTML = days.length
+    ? table([["Date"], ["Trades", "r"], ["Won", "r"], ["Win rate", "r"], ["Profit", "r"]],
+        days.map((d) => { const o = byDay[d];
+          return `<tr><td class="num">${d}</td><td class="r num">${o.n}</td><td class="r num">${o.w}</td><td class="r num">${Math.round((o.w / o.n) * 100)}%</td><td class="r num ${cls(o.p)}">${sgn(o.p, 2)}</td></tr>`; }))
+    : `<div class="empty">No history yet.</div>`;
+
+  $("foot").textContent = "Updated " + new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit", second: "2-digit", timeZone: "Asia/Kolkata" }) +
+    " IST · refreshes every 4 minutes · the agent saves new trades about every 5 minutes. Profit figures exclude brokerage, taxes and slippage.";
+}
+
+async function load() {
+  const btn = $("refresh"); btn.disabled = true; btn.textContent = "Refreshing…";
+  try {
+    const [log, wl, run] = await Promise.all([getFile("trade_log.json"), getFile("daily_watchlist.json").catch(() => null), getAgentRun()]);
+    render(log, wl, run);
+  } catch (e) {
+    const ban = $("banner"); ban.hidden = false; ban.className = "banner down";
+    ban.textContent = "Could not load data from GitHub (" + e.message + "). Try Refresh in a minute.";
+  } finally { btn.disabled = false; btn.textContent = "Refresh"; }
+}
+$("refresh").addEventListener("click", load);
+load();
+setInterval(() => { if (!document.hidden) load(); }, REFRESH_MS);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) load(); });
+</script>
+</body>
+</html>
