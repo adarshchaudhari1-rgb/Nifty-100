@@ -8,11 +8,13 @@ BULLISH day (LONG trades):
      makes a higher high than the peak.
   3. A green candle that CLOSES above the highest high of that pullback/range
      -> entry at that close.
-  4. Stop-loss = the pullback's lowest low, plus a small buffer.
+  4. Stop-loss = the LATEST swing low / rejection wick inside the pullback
+     (not its absolute lowest point), plus a small buffer.
   5. Target = 2 x the risk distance (1:2).
 
 BEARISH day (SHORT trades) is the exact mirror: swing low, pullback/range
-bounces, red candle closing below the range low, stop-loss = range high + buffer.
+bounces, red candle closing below the range low, stop-loss = latest swing high /
+rejection wick + buffer.
 
 Only completed candles are passed in. Entries are only allowed for candles
 that start between SELECTION_TIME and LAST_ENTRY_TIME.
@@ -21,6 +23,38 @@ that start between SELECTION_TIME and LAST_ENTRY_TIME.
 import pandas as pd
 
 import config
+
+
+REJECTION_WICK_RATIO = 0.5     # wick >= 50% of the candle's range counts as a "rejection wick"
+
+
+def _sl_candidates(df: pd.DataFrame, zone_start: int, i: int, long_side: bool) -> list:
+    """Possible stop-loss levels, nearest first: the latest swing / rejection wick
+    inside the pullback, then (last resort) the full pullback extreme.
+
+    SHORT: candle highs that are a swing high (>= both neighbours) or have a long
+           upper wick (rejection).  LONG: mirror image with lows / lower wicks."""
+    levels = []
+    for j in range(i - 1, zone_start - 1, -1):          # latest candle first
+        c = df.iloc[j]
+        rng = float(c["High"] - c["Low"])
+        if rng <= 0:
+            continue
+        prev_c = df.iloc[j - 1] if j - 1 >= 0 else None
+        next_c = df.iloc[j + 1]
+        if long_side:
+            swing = (prev_c is None or c["Low"] <= prev_c["Low"]) and c["Low"] <= next_c["Low"]
+            wick = (min(c["Open"], c["Close"]) - c["Low"]) / rng >= REJECTION_WICK_RATIO
+            if swing or wick:
+                levels.append(float(c["Low"]))
+        else:
+            swing = (prev_c is None or c["High"] >= prev_c["High"]) and c["High"] >= next_c["High"]
+            wick = (c["High"] - max(c["Open"], c["Close"])) / rng >= REJECTION_WICK_RATIO
+            if swing or wick:
+                levels.append(float(c["High"]))
+    zone = df.iloc[zone_start:i]
+    levels.append(float(zone["Low"].min()) if long_side else float(zone["High"].max()))
+    return levels
 
 
 def _detect(df: pd.DataFrame, i: int, direction: str):
@@ -54,8 +88,16 @@ def _detect(df: pd.DataFrame, i: int, direction: str):
             if not cand["Close"] > zone_high:               # must close above the zone high
                 continue
             entry = float(cand["Close"])
-            sl = float(zone_low) * (1 - config.SL_BUFFER_PCT)
-            risk = entry - sl
+            sl, risk = None, 0.0
+            for lvl in _sl_candidates(df, zone_start, i, True):
+                s_ = lvl * (1 - config.SL_BUFFER_PCT)
+                if s_ > cand["Low"] or s_ >= entry:             # must sit beyond the breakout candle
+                    continue
+                if (entry - s_) / entry >= config.MIN_RISK_PCT:   # not so tight it gets noise-stopped
+                    sl, risk = s_, entry - s_
+                    break
+            if sl is None:
+                continue
         else:
             if peak["Low"] > prior["Low"].min():            # trough must be a real swing low
                 continue
@@ -65,8 +107,16 @@ def _detect(df: pd.DataFrame, i: int, direction: str):
             if not cand["Close"] < zone_low:                # must close below the zone low
                 continue
             entry = float(cand["Close"])
-            sl = float(zone_high) * (1 + config.SL_BUFFER_PCT)
-            risk = sl - entry
+            sl, risk = None, 0.0
+            for lvl in _sl_candidates(df, zone_start, i, False):
+                s_ = lvl * (1 + config.SL_BUFFER_PCT)
+                if s_ < cand["High"] or s_ <= entry:
+                    continue
+                if (s_ - entry) / entry >= config.MIN_RISK_PCT:
+                    sl, risk = s_, s_ - entry
+                    break
+            if sl is None:
+                continue
 
         if risk <= 0:
             continue
