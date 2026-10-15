@@ -1,50 +1,13 @@
 {
-  "date": "2026-10-14",
-  "selected_at": "2026-10-14 10:00:20",
+  "date": "2026-10-15",
+  "selected_at": "2026-10-15 10:00:20",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
-  "instrument_keys": {
-    "POLYCAB.NS": "NSE_EQ|INE455K01017",
-    "BANKBARODA.NS": "NSE_EQ|INE028A01039",
-    "SHRIRAMFIN.NS": "NSE_EQ|INE721A01047",
-    "CHOLAFIN.NS": "NSE_EQ|INE121A01024",
-    "DIVISLAB.NS": "NSE_EQ|INE361B01024"
-  },
+  "instrument_keys": {},
   "stocks_with_data": 100,
-  "green": 42,
-  "red": 58,
-  "green_pct": 42.0,
-  "nature": "BEARISH",
-  "stocks": [
-    {
-      "symbol": "POLYCAB.NS",
-      "pct_change": -4.98,
-      "price": 7877.5,
-      "prev_close": 8290.0
-    },
-    {
-      "symbol": "BANKBARODA.NS",
-      "pct_change": -2.72,
-      "price": 231.95,
-      "prev_close": 238.43
-    },
-    {
-      "symbol": "SHRIRAMFIN.NS",
-      "pct_change": -2.68,
-      "price": 961.55,
-      "prev_close": 988.0
-    },
-    {
-      "symbol": "CHOLAFIN.NS",
-      "pct_change": -1.7,
-      "price": 1593.1,
-      "prev_close": 1620.7
-    },
-    {
-      "symbol": "DIVISLAB.NS",
-      "pct_change": -1.51,
-      "price": 9145.0,
-      "prev_close": 9285.0
-    }
-  ]
+  "green": 52,
+  "red": 48,
+  "green_pct": 52.0,
+  "nature": "NEUTRAL",
+  "stocks": []
 }
