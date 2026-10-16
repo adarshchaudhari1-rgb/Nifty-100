@@ -13,7 +13,7 @@
       "position_value": 145975.0,
       "trail_stage": "none",
       "entry_time": "2026-10-16 12:10:00+05:30",
-      "last_checked": "2026-10-16 12:20:00+05:30"
+      "last_checked": "2026-10-16 12:25:00+05:30"
     },
     "ABB.NS": {
       "symbol": "ABB.NS",
@@ -28,7 +28,22 @@
       "position_value": 109224.0,
       "trail_stage": "none",
       "entry_time": "2026-10-16 12:10:00+05:30",
-      "last_checked": "2026-10-16 12:20:00+05:30"
+      "last_checked": "2026-10-16 12:25:00+05:30"
+    },
+    "BSE.NS": {
+      "symbol": "BSE.NS",
+      "direction": "SHORT",
+      "pattern": "Range Breakout",
+      "entry": 3361.0,
+      "initial_sl": 3368.6834999999996,
+      "sl": 3368.6834999999996,
+      "target": 3345.6330000000007,
+      "risk": 7.68349999999964,
+      "qty": 1,
+      "position_value": 3361.0,
+      "trail_stage": "none",
+      "entry_time": "2026-10-16 12:30:00+05:30",
+      "last_checked": "2026-10-16 12:25:00+05:30"
     }
   },
   "closed": [
