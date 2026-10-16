@@ -1,21 +1,5 @@
 {
-  "open": {
-    "ABB.NS": {
-      "symbol": "ABB.NS",
-      "direction": "SHORT",
-      "pattern": "Pullback Breakout",
-      "entry": 6826.5,
-      "initial_sl": 6858.4275,
-      "sl": 6858.4275,
-      "target": 6762.645,
-      "risk": 31.92749999999978,
-      "qty": 16,
-      "position_value": 109224.0,
-      "trail_stage": "none",
-      "entry_time": "2026-10-16 12:10:00+05:30",
-      "last_checked": "2026-10-16 13:35:00+05:30"
-    }
-  },
+  "open": {},
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
@@ -184,7 +168,28 @@
       "pnl_pct": 0.28,
       "pnl_rupees": 417.53,
       "capital_after": 51710.16
+    },
+    {
+      "symbol": "ABB.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 6826.5,
+      "initial_sl": 6858.4275,
+      "sl": 6858.4275,
+      "target": 6762.645,
+      "risk": 31.92749999999978,
+      "qty": 16,
+      "position_value": 109224.0,
+      "trail_stage": "none",
+      "entry_time": "2026-10-16 12:10:00+05:30",
+      "last_checked": "2026-10-16 13:35:00+05:30",
+      "exit_price": 6858.43,
+      "exit_time": "2026-10-16 13:40:00+05:30",
+      "outcome": "SL",
+      "pnl_pct": -0.47,
+      "pnl_rupees": -510.84,
+      "capital_after": 51199.32
     }
   ],
-  "capital": 51710.16
+  "capital": 51199.32
 }
