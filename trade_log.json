@@ -1,5 +1,36 @@
 {
-  "open": {},
+  "open": {
+    "ENRIN.NS": {
+      "symbol": "ENRIN.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 2919.5,
+      "initial_sl": 2939.469,
+      "sl": 2939.469,
+      "target": 2879.562,
+      "risk": 19.96900000000005,
+      "qty": 50,
+      "position_value": 145975.0,
+      "trail_stage": "none",
+      "entry_time": "2026-10-16 12:10:00+05:30",
+      "last_checked": "2026-10-16 12:05:00+05:30"
+    },
+    "ABB.NS": {
+      "symbol": "ABB.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 6826.5,
+      "initial_sl": 6858.4275,
+      "sl": 6858.4275,
+      "target": 6762.645,
+      "risk": 31.92749999999978,
+      "qty": 16,
+      "position_value": 109224.0,
+      "trail_stage": "none",
+      "entry_time": "2026-10-16 12:10:00+05:30",
+      "last_checked": "2026-10-16 12:05:00+05:30"
+    }
+  },
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
