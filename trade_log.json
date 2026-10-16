@@ -13,7 +13,22 @@
       "position_value": 109224.0,
       "trail_stage": "none",
       "entry_time": "2026-10-16 12:10:00+05:30",
-      "last_checked": "2026-10-16 12:55:00+05:30"
+      "last_checked": "2026-10-16 13:00:00+05:30"
+    },
+    "GODREJCP.NS": {
+      "symbol": "GODREJCP.NS",
+      "direction": "SHORT",
+      "pattern": "Range Breakout",
+      "entry": 853.0,
+      "initial_sl": 855.4275,
+      "sl": 855.4275,
+      "target": 848.145,
+      "risk": 2.427500000000009,
+      "qty": 172,
+      "position_value": 146716.0,
+      "trail_stage": "none",
+      "entry_time": "2026-10-16 13:05:00+05:30",
+      "last_checked": "2026-10-16 13:00:00+05:30"
     }
   },
   "closed": [
