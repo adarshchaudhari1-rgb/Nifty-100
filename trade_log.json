@@ -13,22 +13,7 @@
       "position_value": 109224.0,
       "trail_stage": "none",
       "entry_time": "2026-10-16 12:10:00+05:30",
-      "last_checked": "2026-10-16 13:15:00+05:30"
-    },
-    "GODREJCP.NS": {
-      "symbol": "GODREJCP.NS",
-      "direction": "SHORT",
-      "pattern": "Range Breakout",
-      "entry": 853.0,
-      "initial_sl": 855.4275,
-      "sl": 850.5725,
-      "target": 848.145,
-      "risk": 2.427500000000009,
-      "qty": 172,
-      "position_value": 146716.0,
-      "trail_stage": "locked_1r",
-      "entry_time": "2026-10-16 13:05:00+05:30",
-      "last_checked": "2026-10-16 13:15:00+05:30"
+      "last_checked": "2026-10-16 13:20:00+05:30"
     }
   },
   "closed": [
@@ -178,7 +163,28 @@
       "pnl_pct": -0.68,
       "pnl_rupees": -998.45,
       "capital_after": 51292.63
+    },
+    {
+      "symbol": "GODREJCP.NS",
+      "direction": "SHORT",
+      "pattern": "Range Breakout",
+      "entry": 853.0,
+      "initial_sl": 855.4275,
+      "sl": 850.5725,
+      "target": 848.145,
+      "risk": 2.427500000000009,
+      "qty": 172,
+      "position_value": 146716.0,
+      "trail_stage": "locked_1r",
+      "entry_time": "2026-10-16 13:05:00+05:30",
+      "last_checked": "2026-10-16 13:15:00+05:30",
+      "exit_price": 850.57,
+      "exit_time": "2026-10-16 13:20:00+05:30",
+      "outcome": "TRAILED_SL",
+      "pnl_pct": 0.28,
+      "pnl_rupees": 417.53,
+      "capital_after": 51710.16
     }
   ],
-  "capital": 51292.63
+  "capital": 51710.16
 }
