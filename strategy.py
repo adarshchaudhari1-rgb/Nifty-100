@@ -7,13 +7,15 @@ BULLISH day (LONG trades):
   2. A pullback or sideways range of 2-8 candles after it, none of which
      makes a higher high than the peak.
   3. A green candle that CLOSES above the highest high of that pullback/range
+     AND above the day's high so far (new day high = trend still intact)
      -> entry at that close.
   4. Stop-loss = the LATEST swing low / rejection wick inside the pullback
      (not its absolute lowest point), plus a small buffer.
   5. Target = 2 x the risk distance (1:2).
 
 BEARISH day (SHORT trades) is the exact mirror: swing low, pullback/range
-bounces, red candle closing below the range low, stop-loss = latest swing high /
+bounces, red candle closing below the range low AND below the day's low so far,
+stop-loss = latest swing high /
 rejection wick + buffer.
 
 Only completed candles are passed in. Entries are only allowed for candles
@@ -66,6 +68,18 @@ def _detect(df: pd.DataFrame, i: int, direction: str):
     if long_side and not cand["Close"] > cand["Open"]:
         return None
     if not long_side and not cand["Close"] < cand["Open"]:
+        return None
+
+    # Trend filter: the breakout must make a NEW DAY EXTREME in the trade direction.
+    # SHORT: close below the lowest low of the day so far (all candles before this one).
+    # LONG:  close above the highest high of the day so far.
+    # This skips entries after the market has already reversed against the day's move.
+    earlier = df.iloc[:i]
+    if earlier.empty:
+        return None
+    if long_side and not cand["Close"] > earlier["High"].max():
+        return None
+    if not long_side and not cand["Close"] < earlier["Low"].min():
         return None
 
     for length in range(config.MIN_ZONE_CANDLES, config.MAX_ZONE_CANDLES + 1):
