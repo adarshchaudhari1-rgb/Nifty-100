@@ -1,13 +1,55 @@
 {
-  "date": "2026-10-15",
-  "selected_at": "2026-10-15 10:00:20",
+  "date": "2026-10-16",
+  "selected_at": "2026-10-16 10:00:20",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
-  "instrument_keys": {},
+  "instrument_keys": {
+    "BSE.NS": "NSE_EQ|INE118H01025",
+    "HDFCLIFE.NS": "NSE_EQ|INE795G01014",
+    "GODREJCP.NS": "NSE_EQ|INE102D01028",
+    "ENRIN.NS": "NSE_EQ|INE1NPP01017",
+    "ABB.NS": "NSE_EQ|INE117A01022"
+  },
   "stocks_with_data": 100,
-  "green": 52,
-  "red": 48,
-  "green_pct": 52.0,
-  "nature": "NEUTRAL",
-  "stocks": []
+  "green": 33,
+  "red": 67,
+  "green_pct": 33.0,
+  "nature": "BEARISH",
+  "stocks": [
+    {
+      "symbol": "BSE.NS",
+      "side": "SHORT",
+      "pct_change": -2.58,
+      "price": 3339.4,
+      "prev_close": 3428.0
+    },
+    {
+      "symbol": "HDFCLIFE.NS",
+      "side": "SHORT",
+      "pct_change": -2.36,
+      "price": 537.55,
+      "prev_close": 550.55
+    },
+    {
+      "symbol": "GODREJCP.NS",
+      "side": "SHORT",
+      "pct_change": -2.21,
+      "price": 850.15,
+      "prev_close": 869.4
+    },
+    {
+      "symbol": "ENRIN.NS",
+      "side": "SHORT",
+      "pct_change": -1.79,
+      "price": 2904.0,
+      "prev_close": 2957.0
+    },
+    {
+      "symbol": "ABB.NS",
+      "side": "SHORT",
+      "pct_change": -1.59,
+      "price": 6707.5,
+      "prev_close": 6816.0
+    }
+  ]
 }
