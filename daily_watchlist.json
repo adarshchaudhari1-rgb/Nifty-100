@@ -1,55 +1,55 @@
 {
-  "date": "2026-10-16",
-  "selected_at": "2026-10-16 10:00:20",
+  "date": "2026-10-19",
+  "selected_at": "2026-10-19 10:00:20",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "BSE.NS": "NSE_EQ|INE118H01025",
-    "HDFCLIFE.NS": "NSE_EQ|INE795G01014",
-    "GODREJCP.NS": "NSE_EQ|INE102D01028",
-    "ENRIN.NS": "NSE_EQ|INE1NPP01017",
-    "ABB.NS": "NSE_EQ|INE117A01022"
+    "AXISBANK.NS": "NSE_EQ|INE238A01034",
+    "LTM.NS": "NSE_EQ|INE214T01019",
+    "POLYCAB.NS": "NSE_EQ|INE455K01017",
+    "HDFCBANK.NS": "NSE_EQ|INE040A01034",
+    "TATACAP.NS": "NSE_EQ|INE976I01016"
   },
   "stocks_with_data": 100,
-  "green": 33,
-  "red": 67,
-  "green_pct": 33.0,
+  "green": 37,
+  "red": 63,
+  "green_pct": 37.0,
   "nature": "BEARISH",
   "stocks": [
     {
-      "symbol": "BSE.NS",
+      "symbol": "AXISBANK.NS",
       "side": "SHORT",
-      "pct_change": -2.58,
-      "price": 3339.4,
-      "prev_close": 3428.0
+      "pct_change": -4.15,
+      "price": 1236.5,
+      "prev_close": 1290.0
     },
     {
-      "symbol": "HDFCLIFE.NS",
+      "symbol": "LTM.NS",
       "side": "SHORT",
-      "pct_change": -2.36,
-      "price": 537.55,
-      "prev_close": 550.55
+      "pct_change": -2.25,
+      "price": 4291.2,
+      "prev_close": 4390.0
     },
     {
-      "symbol": "GODREJCP.NS",
+      "symbol": "POLYCAB.NS",
       "side": "SHORT",
-      "pct_change": -2.21,
-      "price": 850.15,
-      "prev_close": 869.4
+      "pct_change": -2.22,
+      "price": 8036.5,
+      "prev_close": 8219.0
     },
     {
-      "symbol": "ENRIN.NS",
+      "symbol": "HDFCBANK.NS",
       "side": "SHORT",
-      "pct_change": -1.79,
-      "price": 2904.0,
-      "prev_close": 2957.0
+      "pct_change": -2.17,
+      "price": 713.05,
+      "prev_close": 728.85
     },
     {
-      "symbol": "ABB.NS",
+      "symbol": "TATACAP.NS",
       "side": "SHORT",
-      "pct_change": -1.59,
-      "price": 6707.5,
-      "prev_close": 6816.0
+      "pct_change": -1.64,
+      "price": 317.5,
+      "prev_close": 322.8
     }
   ]
 }
