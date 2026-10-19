@@ -1,21 +1,5 @@
 {
-  "open": {
-    "HDFCBANK.NS": {
-      "symbol": "HDFCBANK.NS",
-      "direction": "SHORT",
-      "pattern": "Pullback Breakout",
-      "entry": 709.35,
-      "initial_sl": 713.306475,
-      "sl": 713.306475,
-      "target": 701.4370500000001,
-      "risk": 3.956474999999955,
-      "qty": 252,
-      "position_value": 178756.2,
-      "trail_stage": "none",
-      "entry_time": "2026-10-19 13:20:00+05:30",
-      "last_checked": "2026-10-19 15:05:00+05:30"
-    }
-  },
+  "open": {},
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
@@ -226,7 +210,28 @@
       "pnl_pct": -0.83,
       "pnl_rupees": -998.07,
       "capital_after": 50201.25
+    },
+    {
+      "symbol": "HDFCBANK.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 709.35,
+      "initial_sl": 713.306475,
+      "sl": 713.306475,
+      "target": 701.4370500000001,
+      "risk": 3.956474999999955,
+      "qty": 252,
+      "position_value": 178756.2,
+      "trail_stage": "none",
+      "entry_time": "2026-10-19 13:20:00+05:30",
+      "last_checked": "2026-10-19 15:10:00+05:30",
+      "exit_price": 712.0,
+      "exit_time": "2026-10-19 15:10:00+05:30",
+      "outcome": "EOD",
+      "pnl_pct": -0.37,
+      "pnl_rupees": -667.8,
+      "capital_after": 49533.45
     }
   ],
-  "capital": 50201.25
+  "capital": 49533.45
 }
