@@ -1,21 +1,5 @@
 {
-  "open": {
-    "BAJFINANCE.NS": {
-      "symbol": "BAJFINANCE.NS",
-      "direction": "SHORT",
-      "pattern": "Pullback Breakout",
-      "entry": 925.65,
-      "initial_sl": 933.4665,
-      "sl": 933.4665,
-      "target": 910.0169999999999,
-      "risk": 7.816500000000019,
-      "qty": 5,
-      "position_value": 4628.25,
-      "trail_stage": "none",
-      "entry_time": "2026-10-21 11:45:00+05:30",
-      "last_checked": "2026-10-21 15:05:00+05:30"
-    }
-  },
+  "open": {},
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
@@ -310,7 +294,28 @@
       "pnl_pct": 0.83,
       "pnl_rupees": 493.45,
       "capital_after": 50024.34
+    },
+    {
+      "symbol": "BAJFINANCE.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 925.65,
+      "initial_sl": 933.4665,
+      "sl": 933.4665,
+      "target": 910.0169999999999,
+      "risk": 7.816500000000019,
+      "qty": 5,
+      "position_value": 4628.25,
+      "trail_stage": "none",
+      "entry_time": "2026-10-21 11:45:00+05:30",
+      "last_checked": "2026-10-21 15:10:00+05:30",
+      "exit_price": 924.3,
+      "exit_time": "2026-10-21 15:10:00+05:30",
+      "outcome": "EOD",
+      "pnl_pct": 0.15,
+      "pnl_rupees": 6.75,
+      "capital_after": 50031.09
     }
   ],
-  "capital": 50024.34
+  "capital": 50031.09
 }
