@@ -1,55 +1,95 @@
 {
-  "date": "2026-10-19",
-  "selected_at": "2026-10-19 10:00:20",
+  "date": "2026-10-21",
+  "selected_at": "2026-10-21 10:00:20",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "AXISBANK.NS": "NSE_EQ|INE238A01034",
-    "LTM.NS": "NSE_EQ|INE214T01019",
-    "POLYCAB.NS": "NSE_EQ|INE455K01017",
-    "HDFCBANK.NS": "NSE_EQ|INE040A01034",
-    "TATACAP.NS": "NSE_EQ|INE976I01016"
+    "WIPRO.NS": "NSE_EQ|INE075A01022",
+    "INFY.NS": "NSE_EQ|INE009A01021",
+    "TCS.NS": "NSE_EQ|INE467B01029",
+    "HCLTECH.NS": "NSE_EQ|INE860A01027",
+    "TECHM.NS": "NSE_EQ|INE669C01036",
+    "ABB.NS": "NSE_EQ|INE117A01022",
+    "VAML.NS": "NSE_EQ|INE1CDF01017",
+    "MUTHOOTFIN.NS": "NSE_EQ|INE414G01012",
+    "BAJFINANCE.NS": "NSE_EQ|INE296A01032",
+    "CGPOWER.NS": "NSE_EQ|INE067A01029"
   },
   "stocks_with_data": 100,
-  "green": 37,
-  "red": 63,
-  "green_pct": 37.0,
-  "nature": "BEARISH",
+  "green": 45,
+  "red": 53,
+  "green_pct": 45.9,
+  "nature": "NEUTRAL",
   "stocks": [
     {
-      "symbol": "AXISBANK.NS",
-      "side": "SHORT",
-      "pct_change": -4.15,
-      "price": 1236.5,
-      "prev_close": 1290.0
+      "symbol": "WIPRO.NS",
+      "side": "LONG",
+      "pct_change": 3.74,
+      "price": 188.96,
+      "prev_close": 182.14
     },
     {
-      "symbol": "LTM.NS",
-      "side": "SHORT",
-      "pct_change": -2.25,
-      "price": 4291.2,
-      "prev_close": 4390.0
+      "symbol": "INFY.NS",
+      "side": "LONG",
+      "pct_change": 3.25,
+      "price": 1167.45,
+      "prev_close": 1130.7
     },
     {
-      "symbol": "POLYCAB.NS",
-      "side": "SHORT",
-      "pct_change": -2.22,
-      "price": 8036.5,
-      "prev_close": 8219.0
+      "symbol": "TCS.NS",
+      "side": "LONG",
+      "pct_change": 2.46,
+      "price": 2521.5,
+      "prev_close": 2460.9
     },
     {
-      "symbol": "HDFCBANK.NS",
-      "side": "SHORT",
-      "pct_change": -2.17,
-      "price": 713.05,
-      "prev_close": 728.85
+      "symbol": "HCLTECH.NS",
+      "side": "LONG",
+      "pct_change": 2.02,
+      "price": 1407.8,
+      "prev_close": 1379.9
     },
     {
-      "symbol": "TATACAP.NS",
+      "symbol": "TECHM.NS",
+      "side": "LONG",
+      "pct_change": 2.01,
+      "price": 1814.8,
+      "prev_close": 1779.1
+    },
+    {
+      "symbol": "ABB.NS",
       "side": "SHORT",
-      "pct_change": -1.64,
-      "price": 317.5,
-      "prev_close": 322.8
+      "pct_change": -3.02,
+      "price": 6763.5,
+      "prev_close": 6974.0
+    },
+    {
+      "symbol": "VAML.NS",
+      "side": "SHORT",
+      "pct_change": -3.0,
+      "price": 360.3,
+      "prev_close": 371.45
+    },
+    {
+      "symbol": "MUTHOOTFIN.NS",
+      "side": "SHORT",
+      "pct_change": -2.85,
+      "price": 2492.8,
+      "prev_close": 2566.0
+    },
+    {
+      "symbol": "BAJFINANCE.NS",
+      "side": "SHORT",
+      "pct_change": -1.91,
+      "price": 939.1,
+      "prev_close": 957.35
+    },
+    {
+      "symbol": "CGPOWER.NS",
+      "side": "SHORT",
+      "pct_change": -1.9,
+      "price": 838.75,
+      "prev_close": 855.0
     }
   ]
 }
