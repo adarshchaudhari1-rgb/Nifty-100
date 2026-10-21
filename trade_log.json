@@ -6,14 +6,14 @@
       "pattern": "Pullback Breakout",
       "entry": 6603.5,
       "initial_sl": 6658.327499999999,
-      "sl": 6658.327499999999,
+      "sl": 6603.5,
       "target": 6493.845000000001,
       "risk": 54.82749999999942,
       "qty": 9,
       "position_value": 59431.5,
-      "trail_stage": "none",
+      "trail_stage": "breakeven",
       "entry_time": "2026-10-21 11:35:00+05:30",
-      "last_checked": "2026-10-21 12:55:00+05:30"
+      "last_checked": "2026-10-21 13:00:00+05:30"
     },
     "BAJFINANCE.NS": {
       "symbol": "BAJFINANCE.NS",
@@ -28,7 +28,7 @@
       "position_value": 4628.25,
       "trail_stage": "none",
       "entry_time": "2026-10-21 11:45:00+05:30",
-      "last_checked": "2026-10-21 12:55:00+05:30"
+      "last_checked": "2026-10-21 13:00:00+05:30"
     }
   },
   "closed": [
