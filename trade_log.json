@@ -1,5 +1,21 @@
 {
-  "open": {},
+  "open": {
+    "VAML.NS": {
+      "symbol": "VAML.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 356.1,
+      "initial_sl": 358.47915,
+      "sl": 358.47915,
+      "target": 351.34170000000006,
+      "risk": 2.3791499999999814,
+      "qty": 420,
+      "position_value": 149562.0,
+      "trail_stage": "none",
+      "entry_time": "2026-10-21 10:40:00+05:30",
+      "last_checked": "2026-10-21 10:35:00+05:30"
+    }
+  },
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
