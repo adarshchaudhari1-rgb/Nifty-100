@@ -1,20 +1,5 @@
 {
   "open": {
-    "ABB.NS": {
-      "symbol": "ABB.NS",
-      "direction": "SHORT",
-      "pattern": "Pullback Breakout",
-      "entry": 6603.5,
-      "initial_sl": 6658.327499999999,
-      "sl": 6548.672500000001,
-      "target": 6493.845000000001,
-      "risk": 54.82749999999942,
-      "qty": 9,
-      "position_value": 59431.5,
-      "trail_stage": "locked_1r",
-      "entry_time": "2026-10-21 11:35:00+05:30",
-      "last_checked": "2026-10-21 13:50:00+05:30"
-    },
     "BAJFINANCE.NS": {
       "symbol": "BAJFINANCE.NS",
       "direction": "SHORT",
@@ -28,7 +13,7 @@
       "position_value": 4628.25,
       "trail_stage": "none",
       "entry_time": "2026-10-21 11:45:00+05:30",
-      "last_checked": "2026-10-21 13:50:00+05:30"
+      "last_checked": "2026-10-21 13:55:00+05:30"
     }
   },
   "closed": [
@@ -304,7 +289,28 @@
       "pnl_pct": 0.56,
       "pnl_rupees": 996.68,
       "capital_after": 49530.89
+    },
+    {
+      "symbol": "ABB.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 6603.5,
+      "initial_sl": 6658.327499999999,
+      "sl": 6548.672500000001,
+      "target": 6493.845000000001,
+      "risk": 54.82749999999942,
+      "qty": 9,
+      "position_value": 59431.5,
+      "trail_stage": "locked_1r",
+      "entry_time": "2026-10-21 11:35:00+05:30",
+      "last_checked": "2026-10-21 13:50:00+05:30",
+      "exit_price": 6548.67,
+      "exit_time": "2026-10-21 13:55:00+05:30",
+      "outcome": "TRAILED_SL",
+      "pnl_pct": 0.83,
+      "pnl_rupees": 493.45,
+      "capital_after": 50024.34
     }
   ],
-  "capital": 49530.89
+  "capital": 50024.34
 }
