@@ -1,21 +1,5 @@
 {
-  "open": {
-    "VAML.NS": {
-      "symbol": "VAML.NS",
-      "direction": "SHORT",
-      "pattern": "Pullback Breakout",
-      "entry": 356.1,
-      "initial_sl": 358.47915,
-      "sl": 358.47915,
-      "target": 351.34170000000006,
-      "risk": 2.3791499999999814,
-      "qty": 420,
-      "position_value": 149562.0,
-      "trail_stage": "none",
-      "entry_time": "2026-10-21 10:40:00+05:30",
-      "last_checked": "2026-10-21 10:45:00+05:30"
-    }
-  },
+  "open": {},
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
@@ -247,7 +231,28 @@
       "pnl_pct": -0.37,
       "pnl_rupees": -667.8,
       "capital_after": 49533.45
+    },
+    {
+      "symbol": "VAML.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 356.1,
+      "initial_sl": 358.47915,
+      "sl": 358.47915,
+      "target": 351.34170000000006,
+      "risk": 2.3791499999999814,
+      "qty": 420,
+      "position_value": 149562.0,
+      "trail_stage": "none",
+      "entry_time": "2026-10-21 10:40:00+05:30",
+      "last_checked": "2026-10-21 10:45:00+05:30",
+      "exit_price": 358.48,
+      "exit_time": "2026-10-21 10:50:00+05:30",
+      "outcome": "SL",
+      "pnl_pct": -0.67,
+      "pnl_rupees": -999.24,
+      "capital_after": 48534.21
     }
   ],
-  "capital": 49533.45
+  "capital": 48534.21
 }
