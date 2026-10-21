@@ -1,20 +1,5 @@
 {
   "open": {
-    "MUTHOOTFIN.NS": {
-      "symbol": "MUTHOOTFIN.NS",
-      "direction": "SHORT",
-      "pattern": "Range Breakout",
-      "entry": 2473.0,
-      "initial_sl": 2486.8428,
-      "sl": 2459.1572,
-      "target": 2445.3144,
-      "risk": 13.842799999999897,
-      "qty": 72,
-      "position_value": 178056.0,
-      "trail_stage": "locked_1r",
-      "entry_time": "2026-10-21 11:25:00+05:30",
-      "last_checked": "2026-10-21 12:25:00+05:30"
-    },
     "ABB.NS": {
       "symbol": "ABB.NS",
       "direction": "SHORT",
@@ -28,7 +13,7 @@
       "position_value": 59431.5,
       "trail_stage": "none",
       "entry_time": "2026-10-21 11:35:00+05:30",
-      "last_checked": "2026-10-21 12:25:00+05:30"
+      "last_checked": "2026-10-21 12:30:00+05:30"
     },
     "BAJFINANCE.NS": {
       "symbol": "BAJFINANCE.NS",
@@ -43,7 +28,7 @@
       "position_value": 4628.25,
       "trail_stage": "none",
       "entry_time": "2026-10-21 11:45:00+05:30",
-      "last_checked": "2026-10-21 12:25:00+05:30"
+      "last_checked": "2026-10-21 12:30:00+05:30"
     }
   },
   "closed": [
@@ -298,7 +283,28 @@
       "pnl_pct": -0.67,
       "pnl_rupees": -999.24,
       "capital_after": 48534.21
+    },
+    {
+      "symbol": "MUTHOOTFIN.NS",
+      "direction": "SHORT",
+      "pattern": "Range Breakout",
+      "entry": 2473.0,
+      "initial_sl": 2486.8428,
+      "sl": 2459.1572,
+      "target": 2445.3144,
+      "risk": 13.842799999999897,
+      "qty": 72,
+      "position_value": 178056.0,
+      "trail_stage": "locked_1r",
+      "entry_time": "2026-10-21 11:25:00+05:30",
+      "last_checked": "2026-10-21 12:25:00+05:30",
+      "exit_price": 2459.16,
+      "exit_time": "2026-10-21 12:30:00+05:30",
+      "outcome": "TRAILED_SL",
+      "pnl_pct": 0.56,
+      "pnl_rupees": 996.68,
+      "capital_after": 49530.89
     }
   ],
-  "capital": 48534.21
+  "capital": 49530.89
 }
