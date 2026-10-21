@@ -13,7 +13,22 @@
       "position_value": 178056.0,
       "trail_stage": "none",
       "entry_time": "2026-10-21 11:25:00+05:30",
-      "last_checked": "2026-10-21 11:25:00+05:30"
+      "last_checked": "2026-10-21 11:30:00+05:30"
+    },
+    "ABB.NS": {
+      "symbol": "ABB.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 6603.5,
+      "initial_sl": 6658.327499999999,
+      "sl": 6658.327499999999,
+      "target": 6493.845000000001,
+      "risk": 54.82749999999942,
+      "qty": 9,
+      "position_value": 59431.5,
+      "trail_stage": "none",
+      "entry_time": "2026-10-21 11:35:00+05:30",
+      "last_checked": "2026-10-21 11:30:00+05:30"
     }
   },
   "closed": [
