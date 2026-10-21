@@ -1,5 +1,21 @@
 {
-  "open": {},
+  "open": {
+    "MUTHOOTFIN.NS": {
+      "symbol": "MUTHOOTFIN.NS",
+      "direction": "SHORT",
+      "pattern": "Range Breakout",
+      "entry": 2473.0,
+      "initial_sl": 2486.8428,
+      "sl": 2486.8428,
+      "target": 2445.3144,
+      "risk": 13.842799999999897,
+      "qty": 72,
+      "position_value": 178056.0,
+      "trail_stage": "none",
+      "entry_time": "2026-10-21 11:25:00+05:30",
+      "last_checked": "2026-10-21 11:20:00+05:30"
+    }
+  },
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
