@@ -1,95 +1,55 @@
 {
-  "date": "2026-10-21",
-  "selected_at": "2026-10-21 10:00:20",
+  "date": "2026-10-22",
+  "selected_at": "2026-10-22 10:00:21",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "WIPRO.NS": "NSE_EQ|INE075A01022",
-    "INFY.NS": "NSE_EQ|INE009A01021",
-    "TCS.NS": "NSE_EQ|INE467B01029",
-    "HCLTECH.NS": "NSE_EQ|INE860A01027",
-    "TECHM.NS": "NSE_EQ|INE669C01036",
-    "ABB.NS": "NSE_EQ|INE117A01022",
-    "VAML.NS": "NSE_EQ|INE1CDF01017",
-    "MUTHOOTFIN.NS": "NSE_EQ|INE414G01012",
-    "BAJFINANCE.NS": "NSE_EQ|INE296A01032",
-    "CGPOWER.NS": "NSE_EQ|INE067A01029"
+    "MAZDOCK.NS": "NSE_EQ|INE249Z01020",
+    "POWERINDIA.NS": "NSE_EQ|INE07Y701011",
+    "HINDZINC.NS": "NSE_EQ|INE267A01025",
+    "NESTLEIND.NS": "NSE_EQ|INE239A01024",
+    "POWERGRID.NS": "NSE_EQ|INE752E01010"
   },
   "stocks_with_data": 100,
-  "green": 45,
-  "red": 53,
-  "green_pct": 45.9,
-  "nature": "NEUTRAL",
+  "green": 9,
+  "red": 91,
+  "green_pct": 9.0,
+  "nature": "BEARISH",
   "stocks": [
     {
-      "symbol": "WIPRO.NS",
-      "side": "LONG",
-      "pct_change": 3.74,
-      "price": 188.96,
-      "prev_close": 182.14
-    },
-    {
-      "symbol": "INFY.NS",
-      "side": "LONG",
-      "pct_change": 3.25,
-      "price": 1167.45,
-      "prev_close": 1130.7
-    },
-    {
-      "symbol": "TCS.NS",
-      "side": "LONG",
-      "pct_change": 2.46,
-      "price": 2521.5,
-      "prev_close": 2460.9
-    },
-    {
-      "symbol": "HCLTECH.NS",
-      "side": "LONG",
-      "pct_change": 2.02,
-      "price": 1407.8,
-      "prev_close": 1379.9
-    },
-    {
-      "symbol": "TECHM.NS",
-      "side": "LONG",
-      "pct_change": 2.01,
-      "price": 1814.8,
-      "prev_close": 1779.1
-    },
-    {
-      "symbol": "ABB.NS",
+      "symbol": "MAZDOCK.NS",
       "side": "SHORT",
-      "pct_change": -3.02,
-      "price": 6763.5,
-      "prev_close": 6974.0
+      "pct_change": -4.57,
+      "price": 1906.3,
+      "prev_close": 1997.5
     },
     {
-      "symbol": "VAML.NS",
+      "symbol": "POWERINDIA.NS",
       "side": "SHORT",
-      "pct_change": -3.0,
-      "price": 360.3,
-      "prev_close": 371.45
+      "pct_change": -3.83,
+      "price": 26975.0,
+      "prev_close": 28050.0
     },
     {
-      "symbol": "MUTHOOTFIN.NS",
+      "symbol": "HINDZINC.NS",
       "side": "SHORT",
-      "pct_change": -2.85,
-      "price": 2492.8,
-      "prev_close": 2566.0
+      "pct_change": -3.05,
+      "price": 509.0,
+      "prev_close": 525.0
     },
     {
-      "symbol": "BAJFINANCE.NS",
+      "symbol": "NESTLEIND.NS",
       "side": "SHORT",
-      "pct_change": -1.91,
-      "price": 939.1,
-      "prev_close": 957.35
+      "pct_change": -2.67,
+      "price": 1191.2,
+      "prev_close": 1223.9
     },
     {
-      "symbol": "CGPOWER.NS",
+      "symbol": "POWERGRID.NS",
       "side": "SHORT",
-      "pct_change": -1.9,
-      "price": 838.75,
-      "prev_close": 855.0
+      "pct_change": -2.36,
+      "price": 246.2,
+      "prev_close": 252.15
     }
   ]
 }
