@@ -1,5 +1,21 @@
 {
-  "open": {},
+  "open": {
+    "ADANIENSOL.NS": {
+      "symbol": "ADANIENSOL.NS",
+      "direction": "SHORT",
+      "pattern": "Pullback Breakout",
+      "entry": 1208.0,
+      "initial_sl": 1215.7075499999999,
+      "sl": 1215.7075499999999,
+      "target": 1192.5849000000003,
+      "risk": 7.707549999999856,
+      "qty": 129,
+      "position_value": 155832.0,
+      "trail_stage": "none",
+      "entry_time": "2026-10-23 12:45:00+05:30",
+      "last_checked": "2026-10-23 12:40:00+05:30"
+    }
+  },
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
