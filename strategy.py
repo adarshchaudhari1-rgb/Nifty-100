@@ -162,7 +162,7 @@ def find_setups(df: pd.DataFrame, direction: str) -> list:
         return setups
     for i in range(len(df)):
         t = df.index[i].time()
-        if t < config.SELECTION_TIME or t > config.LAST_ENTRY_TIME:
+        if t < getattr(config, "FIRST_ENTRY_TIME", config.SELECTION_TIME) or t > config.LAST_ENTRY_TIME:
             continue
         s = _detect(df, i, direction)
         if s:

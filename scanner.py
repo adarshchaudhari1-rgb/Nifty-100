@@ -51,11 +51,11 @@ def build_watchlist(rows: list, today_str: str, source: str, selected_at: str,
     nature = classify(green_pct)
 
     ranked = sorted(rows, key=lambda r: r["pct_change"], reverse=True)
-    if nature == "BULLISH":
+    if nature == "BULLISH" and getattr(config, "TRADE_ON_BULLISH", True):
         picks = [dict(r, side="LONG") for r in ranked[:config.TOP_N]]
-    elif nature == "BEARISH":
+    elif nature == "BEARISH" and getattr(config, "TRADE_ON_BEARISH", True):
         picks = [dict(r, side="SHORT") for r in list(reversed(ranked))[:config.TOP_N]]
-    elif config.NEUTRAL_TRADES_BOTH_SIDES:
+    elif nature == "NEUTRAL" and config.NEUTRAL_TRADES_BOTH_SIDES:
         # No clear direction: watch the strongest stocks for longs and the weakest for shorts
         longs = [dict(r, side="LONG") for r in ranked[:config.TOP_N]]
         shorts = [dict(r, side="SHORT") for r in list(reversed(ranked))[:config.TOP_N]]

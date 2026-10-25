@@ -17,6 +17,7 @@ flattering the paper results.
 
 Daily limits: new trades stop for the day at -DAILY_LOSS_LIMIT, or once profit
 has reached PROFIT_TRAIL_TRIGGER and then falls PROFIT_TRAIL_RISK below its peak.
+With COMPOUNDING on, every rupee amount scales with capital at the start of the day.
 Open trades always run to their own exit.
 """
 
@@ -125,9 +126,11 @@ class PaperTrader:
         else:
             profit_r = (entry - candle["Low"]) / risk
             lock_level, be_level = entry - risk, entry
-        if profit_r >= 1.5 and trade["trail_stage"] != "locked_1r":
+        be_r = getattr(config, "TRAIL_BE_R", 1.0)        # move SL to entry at this profit (in R)
+        lock_r = getattr(config, "TRAIL_LOCK_R", 1.5)    # lock 1R profit at this profit (in R)
+        if profit_r >= lock_r and trade["trail_stage"] != "locked_1r":
             trade["sl"], trade["trail_stage"] = lock_level, "locked_1r"
-        elif profit_r >= 1.0 and trade["trail_stage"] == "none":
+        elif profit_r >= be_r and trade["trail_stage"] == "none":
             trade["sl"], trade["trail_stage"] = be_level, "breakeven"
 
     def _close(self, symbol: str, exit_price: float, exit_time: str, outcome: str) -> dict:
@@ -184,17 +187,26 @@ class PaperTrader:
             running += t["pnl_rupees"]
             peak = max(peak, running)
 
+        # Rupee limits. With COMPOUNDING they grow/shrink with capital at the start of the day.
+        scale = 1.0
+        if getattr(config, "COMPOUNDING", False):
+            day_start_capital = self.capital - running
+            scale = max(day_start_capital, 0) / config.STARTING_CAPITAL
+        loss_limit = config.DAILY_LOSS_LIMIT * scale
+        trail_trigger = config.PROFIT_TRAIL_TRIGGER * scale
+        trail_risk = config.PROFIT_TRAIL_RISK * scale
+
         halted, reason = False, None
-        if running <= -config.DAILY_LOSS_LIMIT:
+        if running <= -loss_limit:
             halted = True
-            reason = f"Daily loss limit hit (Rs {running:.0f}, limit -Rs {config.DAILY_LOSS_LIMIT})"
-        elif peak >= config.PROFIT_TRAIL_TRIGGER and running <= peak - config.PROFIT_TRAIL_RISK:
+            reason = f"Daily loss limit hit (Rs {running:.0f}, limit -Rs {loss_limit:.0f})"
+        elif peak >= trail_trigger and running <= peak - trail_risk:
             halted = True
             reason = (f"Profit trail stop hit (peak Rs {peak:.0f}, now Rs {running:.0f}, "
-                      f"trail level Rs {peak - config.PROFIT_TRAIL_RISK:.0f})")
+                      f"trail level Rs {peak - trail_risk:.0f})")
         # Once the day's profit has reached the trigger, every new trade risks less
-        risk_per_trade = (config.RISK_AFTER_TARGET if peak >= config.PROFIT_TRAIL_TRIGGER
-                          else config.RISK_PER_TRADE)
+        risk_per_trade = round((config.RISK_AFTER_TARGET if peak >= trail_trigger
+                                else config.RISK_PER_TRADE) * scale)
         return {"date": date, "running_pnl": round(running, 2), "peak_pnl": round(peak, 2),
                 "halted": halted, "reason": reason, "risk_per_trade": risk_per_trade}
 
