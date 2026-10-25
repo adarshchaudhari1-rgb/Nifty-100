@@ -161,6 +161,7 @@ const OWNER = "adarshchaudhari1-rgb", REPO = "Nifty-100", BRANCH = "main";
 const STARTING_CAPITAL = 50000;
 const DAILY_LOSS_LIMIT = 2000, PROFIT_TRAIL_TRIGGER = 2000, PROFIT_TRAIL_RISK = 500;
 const RISK_PER_TRADE = 1000, RISK_AFTER_TARGET = 500;
+const COMPOUNDING = true;   /* rupee amounts above are for Rs 50,000 and scale with capital, like the agent */
 const REFRESH_MS = 4 * 60 * 1000;   /* 45 GitHub API calls an hour, under the free 60 */
 
 const $ = (id) => document.getElementById(id);
@@ -199,15 +200,19 @@ async function getAgentRun() {
 }
 
 /* Mirrors the agent's own day-status rules (paper_trader.daily_risk_status) */
-function dayStatus(todays) {
+function dayStatus(todays, capital) {
   let running = 0, peak = 0;
   [...todays].sort((a, b) => String(a.exit_time).localeCompare(String(b.exit_time))).forEach((t) => {
     running += t.pnl_rupees; peak = Math.max(peak, running);
   });
+  const scale = COMPOUNDING ? Math.max(capital - running, 0) / STARTING_CAPITAL : 1;   /* capital at the day's start */
+  const loss = DAILY_LOSS_LIMIT * scale, trig = PROFIT_TRAIL_TRIGGER * scale, give = PROFIT_TRAIL_RISK * scale;
   let halted = false, reason = "";
-  if (running <= -DAILY_LOSS_LIMIT) { halted = true; reason = "Daily loss limit reached"; }
-  else if (peak >= PROFIT_TRAIL_TRIGGER && running <= peak - PROFIT_TRAIL_RISK) { halted = true; reason = "Profit trail hit. Done for the day"; }
-  return { running, peak, halted, reason, risk: peak >= PROFIT_TRAIL_TRIGGER ? RISK_AFTER_TARGET : RISK_PER_TRADE };
+  if (running <= -loss) { halted = true; reason = "Daily loss limit reached"; }
+  else if (peak >= trig && running <= peak - give) { halted = true; reason = "Profit trail hit. Done for the day"; }
+  const reduced = peak >= trig;
+  return { running, peak, halted, reason, reduced, trig,
+           risk: Math.round((reduced ? RISK_AFTER_TARGET : RISK_PER_TRADE) * scale) };
 }
 
 function stageLabel(t) {
@@ -227,7 +232,8 @@ function render(log, wl, run) {
   const open = Array.isArray(log.open) ? log.open : Object.values(log.open || {});
   const closed = log.closed || [];
   const todays = closed.filter((t) => dateOf(t.exit_time) === today);
-  const st = dayStatus(todays);
+  const capital0 = typeof log.capital === "number" ? log.capital : STARTING_CAPITAL;
+  const st = dayStatus(todays, capital0);
   const wins = todays.filter((t) => t.pnl_rupees > 0).length;
   const capital = typeof log.capital === "number" ? log.capital : STARTING_CAPITAL;
 
@@ -251,6 +257,7 @@ function render(log, wl, run) {
   ban.hidden = true; ban.className = "banner";
   if (st.halted) { ban.hidden = false; ban.classList.add("down"); ban.textContent = "No new trades today. " + st.reason + "."; }
   else if (wlToday && wlToday.nature === "NEUTRAL") { ban.hidden = false; ban.textContent = wlToday.stocks.length ? `Mixed market (${wlToday.green_pct}% of stocks green). Watching the top gainers for longs and the top losers for shorts.` : `No trades today. The market is not clearly bullish or bearish (${wlToday.green_pct}% of stocks green).`; }
+  else if (wlToday && wlToday.nature === "BEARISH" && !wlToday.stocks.length) { ban.hidden = false; ban.textContent = `No trades today. Bearish market (${wlToday.green_pct}% of stocks green), and the agent only buys on bullish days.`; }
   else if (!wlToday) { ban.hidden = false; ban.textContent = "Today's stock selection has not run yet. It happens at 10:00 AM."; }
 
   /* stats */
@@ -259,7 +266,7 @@ function render(log, wl, run) {
     ["Today's profit", `<span class="num ${cls(st.running)}">${sgn(st.running)}</span>`, st.peak > 0 ? `Peak ${sgn(st.peak)}` : "Closed trades only"],
     ["Capital", `<span class="num">${inr(capital)}</span>`, `${sgn(capital - STARTING_CAPITAL)} overall`],
     ["Trades today", `<span class="num">${todays.length}</span>`, `${wins} won · ${todays.length - wins} lost · ${open.length} open`],
-    ["Risk per trade", `<span class="num">${inr(st.risk)}</span>`, st.risk === RISK_AFTER_TARGET ? "Reduced after ₹2,000 profit" : "Normal size"],
+    ["Risk per trade", `<span class="num">${inr(st.risk)}</span>`, st.reduced ? `Halved after ${inr(st.trig)} profit today` : "2% of capital"],
     ["All time", `<span class="num ${cls(allPnl)}">${sgn(allPnl)}</span>`, `${closed.length} closed trades`],
   ].map(([k, v, s]) => `<div class="stat"><div class="k">${k}</div><div class="v">${v}</div><div class="s">${s}</div></div>`).join("");
 
