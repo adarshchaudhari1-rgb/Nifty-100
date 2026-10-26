@@ -1,21 +1,5 @@
 {
-  "open": {
-    "DRREDDY.NS": {
-      "symbol": "DRREDDY.NS",
-      "direction": "LONG",
-      "pattern": "Pullback Breakout",
-      "entry": 1312.6,
-      "initial_sl": 1301.64885,
-      "sl": 1301.64885,
-      "target": 1334.5022999999997,
-      "risk": 10.95114999999987,
-      "qty": 91,
-      "position_value": 119446.6,
-      "trail_stage": "none",
-      "entry_time": "2026-10-26 12:50:00+05:30",
-      "last_checked": "2026-10-26 15:05:00+05:30"
-    }
-  },
+  "open": {},
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
@@ -352,7 +336,28 @@
       "pnl_pct": 0.0,
       "pnl_rupees": 0.0,
       "capital_after": 50031.09
+    },
+    {
+      "symbol": "DRREDDY.NS",
+      "direction": "LONG",
+      "pattern": "Pullback Breakout",
+      "entry": 1312.6,
+      "initial_sl": 1301.64885,
+      "sl": 1301.64885,
+      "target": 1334.5022999999997,
+      "risk": 10.95114999999987,
+      "qty": 91,
+      "position_value": 119446.6,
+      "trail_stage": "none",
+      "entry_time": "2026-10-26 12:50:00+05:30",
+      "last_checked": "2026-10-26 15:10:00+05:30",
+      "exit_price": 1313.8,
+      "exit_time": "2026-10-26 15:10:00+05:30",
+      "outcome": "EOD",
+      "pnl_pct": 0.09,
+      "pnl_rupees": 109.2,
+      "capital_after": 50140.29
     }
   ],
-  "capital": 50031.09
+  "capital": 50140.29
 }
