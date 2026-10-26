@@ -1,5 +1,21 @@
 {
-  "open": {},
+  "open": {
+    "DRREDDY.NS": {
+      "symbol": "DRREDDY.NS",
+      "direction": "LONG",
+      "pattern": "Pullback Breakout",
+      "entry": 1312.6,
+      "initial_sl": 1301.64885,
+      "sl": 1301.64885,
+      "target": 1334.5022999999997,
+      "risk": 10.95114999999987,
+      "qty": 91,
+      "position_value": 119446.6,
+      "trail_stage": "none",
+      "entry_time": "2026-10-26 12:50:00+05:30",
+      "last_checked": "2026-10-26 12:45:00+05:30"
+    }
+  },
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
