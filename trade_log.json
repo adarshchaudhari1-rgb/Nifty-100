@@ -1,21 +1,5 @@
 {
-  "open": {
-    "TMCV.NS": {
-      "symbol": "TMCV.NS",
-      "direction": "LONG",
-      "pattern": "Pullback Breakout",
-      "entry": 403.05,
-      "initial_sl": 400.89945000000006,
-      "sl": 400.89945000000006,
-      "target": 407.3510999999999,
-      "risk": 2.150549999999953,
-      "qty": 466,
-      "position_value": 187821.3,
-      "trail_stage": "none",
-      "entry_time": "2026-10-27 11:55:00+05:30",
-      "last_checked": "2026-10-27 13:00:00+05:30"
-    }
-  },
+  "open": {},
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
@@ -373,7 +357,28 @@
       "pnl_pct": 0.09,
       "pnl_rupees": 109.2,
       "capital_after": 50140.29
+    },
+    {
+      "symbol": "TMCV.NS",
+      "direction": "LONG",
+      "pattern": "Pullback Breakout",
+      "entry": 403.05,
+      "initial_sl": 400.89945000000006,
+      "sl": 400.89945000000006,
+      "target": 407.3510999999999,
+      "risk": 2.150549999999953,
+      "qty": 466,
+      "position_value": 187821.3,
+      "trail_stage": "none",
+      "entry_time": "2026-10-27 11:55:00+05:30",
+      "last_checked": "2026-10-27 13:00:00+05:30",
+      "exit_price": 400.9,
+      "exit_time": "2026-10-27 13:05:00+05:30",
+      "outcome": "SL",
+      "pnl_pct": -0.53,
+      "pnl_rupees": -1002.16,
+      "capital_after": 49138.13
     }
   ],
-  "capital": 50140.29
+  "capital": 49138.13
 }
