@@ -1,5 +1,21 @@
 {
-  "open": {},
+  "open": {
+    "TMCV.NS": {
+      "symbol": "TMCV.NS",
+      "direction": "LONG",
+      "pattern": "Pullback Breakout",
+      "entry": 403.05,
+      "initial_sl": 400.89945000000006,
+      "sl": 400.89945000000006,
+      "target": 407.3510999999999,
+      "risk": 2.150549999999953,
+      "qty": 466,
+      "position_value": 187821.3,
+      "trail_stage": "none",
+      "entry_time": "2026-10-27 11:55:00+05:30",
+      "last_checked": "2026-10-27 11:50:00+05:30"
+    }
+  },
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
