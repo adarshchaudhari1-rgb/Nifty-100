@@ -1,55 +1,13 @@
 {
-  "date": "2026-10-27",
-  "selected_at": "2026-10-27 10:00:20",
+  "date": "2026-10-28",
+  "selected_at": "2026-10-28 10:00:20",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
-  "instrument_keys": {
-    "TATACONSUM.NS": "NSE_EQ|INE192A01025",
-    "TMCV.NS": "NSE_EQ|INE1TAE01010",
-    "DIVISLAB.NS": "NSE_EQ|INE361B01024",
-    "HAL.NS": "NSE_EQ|INE066F01020",
-    "BEL.NS": "NSE_EQ|INE263A01024"
-  },
+  "instrument_keys": {},
   "stocks_with_data": 100,
-  "green": 68,
-  "red": 30,
-  "green_pct": 69.4,
-  "nature": "BULLISH",
-  "stocks": [
-    {
-      "symbol": "TATACONSUM.NS",
-      "side": "LONG",
-      "pct_change": 6.34,
-      "price": 995.9,
-      "prev_close": 936.5
-    },
-    {
-      "symbol": "TMCV.NS",
-      "side": "LONG",
-      "pct_change": 3.22,
-      "price": 396.4,
-      "prev_close": 384.05
-    },
-    {
-      "symbol": "DIVISLAB.NS",
-      "side": "LONG",
-      "pct_change": 2.85,
-      "price": 9308.0,
-      "prev_close": 9050.0
-    },
-    {
-      "symbol": "HAL.NS",
-      "side": "LONG",
-      "pct_change": 2.6,
-      "price": 4899.0,
-      "prev_close": 4775.0
-    },
-    {
-      "symbol": "BEL.NS",
-      "side": "LONG",
-      "pct_change": 2.09,
-      "price": 370.6,
-      "prev_close": 363.0
-    }
-  ]
+  "green": 39,
+  "red": 61,
+  "green_pct": 39.0,
+  "nature": "BEARISH",
+  "stocks": []
 }
