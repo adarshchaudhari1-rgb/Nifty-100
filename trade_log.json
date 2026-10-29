@@ -13,22 +13,7 @@
       "position_value": 97594.2,
       "trail_stage": "breakeven",
       "entry_time": "2026-10-29 11:55:00+05:30",
-      "last_checked": "2026-10-29 14:25:00+05:30"
-    },
-    "ADANIENT.NS": {
-      "symbol": "ADANIENT.NS",
-      "direction": "LONG",
-      "pattern": "Range Breakout",
-      "entry": 2582.1,
-      "initial_sl": 2562.81795,
-      "sl": 2582.1,
-      "target": 2620.6640999999995,
-      "risk": 19.2820499999998,
-      "qty": 50,
-      "position_value": 129105.0,
-      "trail_stage": "breakeven",
-      "entry_time": "2026-10-29 12:20:00+05:30",
-      "last_checked": "2026-10-29 14:25:00+05:30"
+      "last_checked": "2026-10-29 14:30:00+05:30"
     }
   },
   "closed": [
@@ -409,9 +394,30 @@
       "pnl_pct": -0.53,
       "pnl_rupees": -1002.16,
       "capital_after": 49138.13
+    },
+    {
+      "symbol": "ADANIENT.NS",
+      "direction": "LONG",
+      "pattern": "Range Breakout",
+      "entry": 2582.1,
+      "initial_sl": 2562.81795,
+      "sl": 2582.1,
+      "target": 2620.6640999999995,
+      "risk": 19.2820499999998,
+      "qty": 50,
+      "position_value": 129105.0,
+      "trail_stage": "breakeven",
+      "entry_time": "2026-10-29 12:20:00+05:30",
+      "last_checked": "2026-10-29 14:25:00+05:30",
+      "exit_price": 2620.66,
+      "exit_time": "2026-10-29 14:30:00+05:30",
+      "outcome": "TARGET",
+      "pnl_pct": 1.49,
+      "pnl_rupees": 1928.2,
+      "capital_after": 51066.33
     }
   ],
-  "capital": 49138.13,
+  "capital": 51066.33,
   "deposits_total": 0,
   "last_deposit_month": "2026-10"
 }
