@@ -13,7 +13,7 @@
       "position_value": 97594.2,
       "trail_stage": "none",
       "entry_time": "2026-10-29 11:55:00+05:30",
-      "last_checked": "2026-10-29 11:50:00+05:30"
+      "last_checked": "2026-10-29 11:55:00+05:30"
     }
   },
   "closed": [
@@ -396,5 +396,7 @@
       "capital_after": 49138.13
     }
   ],
-  "capital": 49138.13
+  "capital": 49138.13,
+  "deposits_total": 0,
+  "last_deposit_month": "2026-10"
 }
