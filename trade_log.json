@@ -1,21 +1,5 @@
 {
-  "open": {
-    "ADANIPORTS.NS": {
-      "symbol": "ADANIPORTS.NS",
-      "direction": "LONG",
-      "pattern": "Pullback Breakout",
-      "entry": 1841.4,
-      "initial_sl": 1823.18795,
-      "sl": 1841.4,
-      "target": 1877.8241000000003,
-      "risk": 18.21205000000009,
-      "qty": 53,
-      "position_value": 97594.2,
-      "trail_stage": "breakeven",
-      "entry_time": "2026-10-29 11:55:00+05:30",
-      "last_checked": "2026-10-29 15:05:00+05:30"
-    }
-  },
+  "open": {},
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
@@ -415,9 +399,30 @@
       "pnl_pct": 1.49,
       "pnl_rupees": 1928.2,
       "capital_after": 51066.33
+    },
+    {
+      "symbol": "ADANIPORTS.NS",
+      "direction": "LONG",
+      "pattern": "Pullback Breakout",
+      "entry": 1841.4,
+      "initial_sl": 1823.18795,
+      "sl": 1841.4,
+      "target": 1877.8241000000003,
+      "risk": 18.21205000000009,
+      "qty": 53,
+      "position_value": 97594.2,
+      "trail_stage": "breakeven",
+      "entry_time": "2026-10-29 11:55:00+05:30",
+      "last_checked": "2026-10-29 15:10:00+05:30",
+      "exit_price": 1869.9,
+      "exit_time": "2026-10-29 15:10:00+05:30",
+      "outcome": "EOD",
+      "pnl_pct": 1.55,
+      "pnl_rupees": 1510.5,
+      "capital_after": 52576.83
     }
   ],
-  "capital": 51066.33,
+  "capital": 52576.83,
   "deposits_total": 0,
   "last_deposit_month": "2026-10"
 }
