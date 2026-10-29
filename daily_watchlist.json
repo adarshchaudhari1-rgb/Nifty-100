@@ -1,13 +1,55 @@
 {
-  "date": "2026-10-28",
-  "selected_at": "2026-10-28 10:00:20",
+  "date": "2026-10-29",
+  "selected_at": "2026-10-29 10:00:21",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
-  "instrument_keys": {},
+  "instrument_keys": {
+    "HYUNDAI.NS": "NSE_EQ|INE0V6F01027",
+    "ADANIPORTS.NS": "NSE_EQ|INE742F01042",
+    "ADANIGREEN.NS": "NSE_EQ|INE364U01010",
+    "MUTHOOTFIN.NS": "NSE_EQ|INE414G01012",
+    "ADANIENT.NS": "NSE_EQ|INE423A01024"
+  },
   "stocks_with_data": 100,
-  "green": 39,
-  "red": 61,
-  "green_pct": 39.0,
-  "nature": "BEARISH",
-  "stocks": []
+  "green": 58,
+  "red": 42,
+  "green_pct": 58.0,
+  "nature": "BULLISH",
+  "stocks": [
+    {
+      "symbol": "HYUNDAI.NS",
+      "side": "LONG",
+      "pct_change": 3.85,
+      "price": 1938.8,
+      "prev_close": 1866.9
+    },
+    {
+      "symbol": "ADANIPORTS.NS",
+      "side": "LONG",
+      "pct_change": 2.49,
+      "price": 1805.2,
+      "prev_close": 1761.3
+    },
+    {
+      "symbol": "ADANIGREEN.NS",
+      "side": "LONG",
+      "pct_change": 2.25,
+      "price": 1297.6,
+      "prev_close": 1269.0
+    },
+    {
+      "symbol": "MUTHOOTFIN.NS",
+      "side": "LONG",
+      "pct_change": 2.09,
+      "price": 2442.8,
+      "prev_close": 2392.7
+    },
+    {
+      "symbol": "ADANIENT.NS",
+      "side": "LONG",
+      "pct_change": 2.04,
+      "price": 2530.3,
+      "prev_close": 2479.8
+    }
+  ]
 }
