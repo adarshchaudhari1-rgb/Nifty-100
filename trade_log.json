@@ -13,7 +13,7 @@
       "position_value": 97594.2,
       "trail_stage": "none",
       "entry_time": "2026-10-29 11:55:00+05:30",
-      "last_checked": "2026-10-29 13:55:00+05:30"
+      "last_checked": "2026-10-29 14:00:00+05:30"
     },
     "ADANIENT.NS": {
       "symbol": "ADANIENT.NS",
@@ -21,14 +21,14 @@
       "pattern": "Range Breakout",
       "entry": 2582.1,
       "initial_sl": 2562.81795,
-      "sl": 2562.81795,
+      "sl": 2582.1,
       "target": 2620.6640999999995,
       "risk": 19.2820499999998,
       "qty": 50,
       "position_value": 129105.0,
-      "trail_stage": "none",
+      "trail_stage": "breakeven",
       "entry_time": "2026-10-29 12:20:00+05:30",
-      "last_checked": "2026-10-29 13:55:00+05:30"
+      "last_checked": "2026-10-29 14:00:00+05:30"
     }
   },
   "closed": [
