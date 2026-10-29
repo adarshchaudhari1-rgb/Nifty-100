@@ -1,5 +1,21 @@
 {
-  "open": {},
+  "open": {
+    "ADANIPORTS.NS": {
+      "symbol": "ADANIPORTS.NS",
+      "direction": "LONG",
+      "pattern": "Pullback Breakout",
+      "entry": 1841.4,
+      "initial_sl": 1823.18795,
+      "sl": 1823.18795,
+      "target": 1877.8241000000003,
+      "risk": 18.21205000000009,
+      "qty": 53,
+      "position_value": 97594.2,
+      "trail_stage": "none",
+      "entry_time": "2026-10-29 11:55:00+05:30",
+      "last_checked": "2026-10-29 11:50:00+05:30"
+    }
+  },
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
