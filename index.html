@@ -257,14 +257,14 @@ function render(log, wl, run) {
   ban.hidden = true; ban.className = "banner";
   if (st.halted) { ban.hidden = false; ban.classList.add("down"); ban.textContent = "No new trades today. " + st.reason + "."; }
   else if (wlToday && wlToday.nature === "NEUTRAL") { ban.hidden = false; ban.textContent = wlToday.stocks.length ? `Mixed market (${wlToday.green_pct}% of stocks green). Watching the top gainers for longs and the top losers for shorts.` : `No trades today. The market is not clearly bullish or bearish (${wlToday.green_pct}% of stocks green).`; }
-  else if (wlToday && wlToday.nature === "BEARISH" && !wlToday.stocks.length) { ban.hidden = false; ban.textContent = `No trades today. Bearish market (${wlToday.green_pct}% of stocks green), and the agent only buys on bullish days.`; }
+  else if (wlToday && wlToday.nature === "BEARISH" && !wlToday.stocks.length) { ban.hidden = false; ban.textContent = `No trades today. Bearish market (${wlToday.green_pct}% of stocks green), but no stocks to watch.`; }
   else if (!wlToday) { ban.hidden = false; ban.textContent = "Today's stock selection has not run yet. It happens at 10:00 AM."; }
 
   /* stats */
   const allPnl = closed.reduce((a, t) => a + t.pnl_rupees, 0);
   $("stats").innerHTML = [
     ["Today's profit", `<span class="num ${cls(st.running)}">${sgn(st.running)}</span>`, st.peak > 0 ? `Peak ${sgn(st.peak)}` : "Closed trades only"],
-    ["Capital", `<span class="num">${inr(capital)}</span>`, `${sgn(capital - STARTING_CAPITAL)} overall`],
+    ["Capital", `<span class="num">${inr(capital)}</span>`, `${sgn(capital - STARTING_CAPITAL - (log.deposits_total || 0))} from trading` + ((log.deposits_total || 0) ? ` \u00B7 ${inr(log.deposits_total)} added` : "")],
     ["Trades today", `<span class="num">${todays.length}</span>`, `${wins} won · ${todays.length - wins} lost · ${open.length} open`],
     ["Risk per trade", `<span class="num">${inr(st.risk)}</span>`, st.reduced ? `Halved after ${inr(st.trig)} profit today` : "2% of capital"],
     ["All time", `<span class="num ${cls(allPnl)}">${sgn(allPnl)}</span>`, `${closed.length} closed trades`],

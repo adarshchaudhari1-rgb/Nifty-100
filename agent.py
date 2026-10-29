@@ -73,6 +73,9 @@ def run_once(now=None) -> None:
     print(f"Data source: {data.LAST_SOURCE}")
 
     trader = PaperTrader()
+    added = trader.apply_monthly_deposit(today_str[:7])
+    if added:
+        print(f"Monthly top-up: Rs {added} added. Capital now Rs {trader.capital}")
 
     # A trade left open from an earlier day can't be tracked properly - reset it flat.
     for sym in list(trader.open_trades):
@@ -160,7 +163,9 @@ def print_report(trader: PaperTrader) -> None:
     print(f"Trades: {summary['total_trades']}  |  Wins: {summary['wins']}  |  "
           f"Losses: {summary['losses']}  |  Win rate: {summary['win_rate']}%")
     print(f"Today's PnL: Rs {summary['total_pnl_rupees']} ({summary['total_pnl_pct']}%)")
-    print(f"Current Capital: Rs {summary['current_capital']} (started at Rs {config.STARTING_CAPITAL})")
+    deposits = getattr(trader, "deposits_total", 0)
+    print(f"Current Capital: Rs {summary['current_capital']} (started at Rs {config.STARTING_CAPITAL}"
+          + (f", plus Rs {deposits} of monthly top-ups" if deposits else "") + ")")
     if status["halted"]:
         print(f"Trading halted today: {status['reason']}")
     for t in summary["trades"]:

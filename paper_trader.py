@@ -71,11 +71,36 @@ class PaperTrader:
             self.closed_trades = d.get("closed", [])
             self.open_trades = d.get("open", {})
             self.capital = d.get("capital", config.STARTING_CAPITAL)
+            self.deposits_total = d.get("deposits_total", 0)
+            self.last_deposit_month = d.get("last_deposit_month")
 
     def _save(self):
         with open(self.log_file, "w") as f:
             json.dump({"open": self.open_trades, "closed": self.closed_trades,
-                       "capital": self.capital}, f, indent=2, default=str)
+                       "capital": self.capital,
+                       "deposits_total": getattr(self, "deposits_total", 0),
+                       "last_deposit_month": getattr(self, "last_deposit_month", None)},
+                      f, indent=2, default=str)
+
+    # ---------- monthly top-up ----------
+    def apply_monthly_deposit(self, month: str):
+        """Add MONTHLY_DEPOSIT once per calendar month (first run of the month).
+        The month this feature is switched on is only recorded, not credited.
+        Returns the amount added (0 if nothing was added)."""
+        amount = getattr(config, "MONTHLY_DEPOSIT", 0)
+        if not amount:
+            return 0
+        if getattr(self, "last_deposit_month", None) is None:
+            self.last_deposit_month = month          # start counting from next month
+            self._save()
+            return 0
+        if self.last_deposit_month == month:
+            return 0
+        self.capital = round(self.capital + amount, 2)
+        self.deposits_total = getattr(self, "deposits_total", 0) + amount
+        self.last_deposit_month = month
+        self._save()
+        return amount
 
     # ---------- queries ----------
     def has_open_trade(self, symbol: str) -> bool:

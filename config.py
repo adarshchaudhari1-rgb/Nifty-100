@@ -15,6 +15,7 @@ DAILY_LOSS_LIMIT = 2_000       # stop opening new trades once the day's realized
 PROFIT_TRAIL_TRIGGER = 2_000   # once the day's profit reaches this, start trailing it
 PROFIT_TRAIL_RISK = 500        # ...and stop for the day if profit falls this far below its peak
 RISK_AFTER_TARGET = 500        # once the day's profit has reached PROFIT_TRAIL_TRIGGER, risk only this much per trade
+MONTHLY_DEPOSIT = 2_000        # paper money added to capital on the first trading day of each month (0 = off)
 COMPOUNDING = True             # scale ALL the Rs amounts above with capital (at the start of each day):
                                # Rs 1,000 risk on Rs 50,000 = 2% of capital, so at Rs 75,000 it becomes
                                # Rs 1,500; the daily loss limit (4%), profit trail (4% / 1%) and
@@ -33,7 +34,7 @@ BEARISH_MAX_GREEN_PCT = 45      # green stocks <= this %                    -> B
 TOP_N = 5                       # how many stocks to watch (per side)
 NEUTRAL_TRADES_BOTH_SIDES = False # on a NEUTRAL day, watch the TOP_N gainers (longs) AND the TOP_N losers (shorts)
 TRADE_ON_BULLISH = True         # take longs on BULLISH days
-TRADE_ON_BEARISH = False        # take shorts on BEARISH days (off for the clean test)
+TRADE_ON_BEARISH = True         # take shorts on BEARISH days (backtest: +Rs 1.04 lakh over 3 years with the current rules)
 MIN_STOCKS_WITH_DATA = 80       # abort selection if fewer than this many stocks returned data
 
 # ---------------- Pullback / range breakout setup (5-min candles) ----------------
