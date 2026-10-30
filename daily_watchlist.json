@@ -1,55 +1,55 @@
 {
-  "date": "2026-10-29",
-  "selected_at": "2026-10-29 10:00:21",
+  "date": "2026-10-30",
+  "selected_at": "2026-10-30 10:00:20",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "HYUNDAI.NS": "NSE_EQ|INE0V6F01027",
-    "ADANIPORTS.NS": "NSE_EQ|INE742F01042",
-    "ADANIGREEN.NS": "NSE_EQ|INE364U01010",
-    "MUTHOOTFIN.NS": "NSE_EQ|INE414G01012",
-    "ADANIENT.NS": "NSE_EQ|INE423A01024"
+    "GODREJCP.NS": "NSE_EQ|INE102D01028",
+    "MAZDOCK.NS": "NSE_EQ|INE249Z01020",
+    "CUMMINSIND.NS": "NSE_EQ|INE298A01020",
+    "HINDZINC.NS": "NSE_EQ|INE267A01025",
+    "CGPOWER.NS": "NSE_EQ|INE067A01029"
   },
   "stocks_with_data": 100,
-  "green": 58,
-  "red": 42,
-  "green_pct": 58.0,
-  "nature": "BULLISH",
+  "green": 38,
+  "red": 62,
+  "green_pct": 38.0,
+  "nature": "BEARISH",
   "stocks": [
     {
-      "symbol": "HYUNDAI.NS",
-      "side": "LONG",
-      "pct_change": 3.85,
-      "price": 1938.8,
-      "prev_close": 1866.9
+      "symbol": "GODREJCP.NS",
+      "side": "SHORT",
+      "pct_change": -3.53,
+      "price": 807.45,
+      "prev_close": 837.0
     },
     {
-      "symbol": "ADANIPORTS.NS",
-      "side": "LONG",
-      "pct_change": 2.49,
-      "price": 1805.2,
-      "prev_close": 1761.3
+      "symbol": "MAZDOCK.NS",
+      "side": "SHORT",
+      "pct_change": -2.71,
+      "price": 1715.0,
+      "prev_close": 1762.7
     },
     {
-      "symbol": "ADANIGREEN.NS",
-      "side": "LONG",
-      "pct_change": 2.25,
-      "price": 1297.6,
-      "prev_close": 1269.0
+      "symbol": "CUMMINSIND.NS",
+      "side": "SHORT",
+      "pct_change": -2.56,
+      "price": 4399.7,
+      "prev_close": 4515.2
     },
     {
-      "symbol": "MUTHOOTFIN.NS",
-      "side": "LONG",
-      "pct_change": 2.09,
-      "price": 2442.8,
-      "prev_close": 2392.7
+      "symbol": "HINDZINC.NS",
+      "side": "SHORT",
+      "pct_change": -2.44,
+      "price": 503.9,
+      "prev_close": 516.5
     },
     {
-      "symbol": "ADANIENT.NS",
-      "side": "LONG",
-      "pct_change": 2.04,
-      "price": 2530.3,
-      "prev_close": 2479.8
+      "symbol": "CGPOWER.NS",
+      "side": "SHORT",
+      "pct_change": -2.16,
+      "price": 811.85,
+      "prev_close": 829.8
     }
   ]
 }
