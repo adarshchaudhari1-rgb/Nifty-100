@@ -1,5 +1,21 @@
 {
-  "open": {},
+  "open": {
+    "TATASTEEL.NS": {
+      "symbol": "TATASTEEL.NS",
+      "direction": "LONG",
+      "pattern": "Pullback Breakout",
+      "entry": 176.02,
+      "initial_sl": 175.13239000000002,
+      "sl": 175.13239000000002,
+      "target": 177.79522,
+      "risk": 0.8876099999999951,
+      "qty": 1230,
+      "position_value": 216504.6,
+      "trail_stage": "none",
+      "entry_time": "2026-11-02 13:05:00+05:30",
+      "last_checked": "2026-11-02 13:00:00+05:30"
+    }
+  },
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
