@@ -1,21 +1,5 @@
 {
-  "open": {
-    "RELIANCE.NS": {
-      "symbol": "RELIANCE.NS",
-      "direction": "LONG",
-      "pattern": "Range Breakout",
-      "entry": 1257.2,
-      "initial_sl": 1250.3745000000001,
-      "sl": 1250.3745000000001,
-      "target": 1270.8509999999999,
-      "risk": 6.82549999999992,
-      "qty": 159,
-      "position_value": 199894.8,
-      "trail_stage": "none",
-      "entry_time": "2026-11-02 10:55:00+05:30",
-      "last_checked": "2026-11-02 12:45:00+05:30"
-    }
-  },
+  "open": {},
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
@@ -436,9 +420,30 @@
       "pnl_pct": 1.55,
       "pnl_rupees": 1510.5,
       "capital_after": 52576.83
+    },
+    {
+      "symbol": "RELIANCE.NS",
+      "direction": "LONG",
+      "pattern": "Range Breakout",
+      "entry": 1257.2,
+      "initial_sl": 1250.3745000000001,
+      "sl": 1250.3745000000001,
+      "target": 1270.8509999999999,
+      "risk": 6.82549999999992,
+      "qty": 159,
+      "position_value": 199894.8,
+      "trail_stage": "none",
+      "entry_time": "2026-11-02 10:55:00+05:30",
+      "last_checked": "2026-11-02 12:45:00+05:30",
+      "exit_price": 1250.37,
+      "exit_time": "2026-11-02 12:50:00+05:30",
+      "outcome": "SL",
+      "pnl_pct": -0.54,
+      "pnl_rupees": -1085.25,
+      "capital_after": 53491.58
     }
   ],
-  "capital": 54576.83,
+  "capital": 53491.58,
   "deposits_total": 2000,
   "last_deposit_month": "2026-11"
 }
