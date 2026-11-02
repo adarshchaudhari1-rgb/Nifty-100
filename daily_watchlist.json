@@ -1,55 +1,55 @@
 {
-  "date": "2026-10-30",
-  "selected_at": "2026-10-30 10:00:20",
+  "date": "2026-11-02",
+  "selected_at": "2026-11-02 10:00:20",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "GODREJCP.NS": "NSE_EQ|INE102D01028",
-    "MAZDOCK.NS": "NSE_EQ|INE249Z01020",
-    "CUMMINSIND.NS": "NSE_EQ|INE298A01020",
-    "HINDZINC.NS": "NSE_EQ|INE267A01025",
-    "CGPOWER.NS": "NSE_EQ|INE067A01029"
+    "RELIANCE.NS": "NSE_EQ|INE002A01018",
+    "TATASTEEL.NS": "NSE_EQ|INE081A01020",
+    "AMBUJACEM.NS": "NSE_EQ|INE079A01024",
+    "MAXHEALTH.NS": "NSE_EQ|INE027H01010",
+    "JIOFIN.NS": "NSE_EQ|INE758E01017"
   },
   "stocks_with_data": 100,
-  "green": 38,
-  "red": 62,
-  "green_pct": 38.0,
-  "nature": "BEARISH",
+  "green": 85,
+  "red": 15,
+  "green_pct": 85.0,
+  "nature": "BULLISH",
   "stocks": [
     {
-      "symbol": "GODREJCP.NS",
-      "side": "SHORT",
-      "pct_change": -3.53,
-      "price": 807.45,
-      "prev_close": 837.0
+      "symbol": "RELIANCE.NS",
+      "side": "LONG",
+      "pct_change": 6.12,
+      "price": 1236.2,
+      "prev_close": 1164.9
     },
     {
-      "symbol": "MAZDOCK.NS",
-      "side": "SHORT",
-      "pct_change": -2.71,
-      "price": 1715.0,
-      "prev_close": 1762.7
+      "symbol": "TATASTEEL.NS",
+      "side": "LONG",
+      "pct_change": 3.94,
+      "price": 174.2,
+      "prev_close": 167.6
     },
     {
-      "symbol": "CUMMINSIND.NS",
-      "side": "SHORT",
-      "pct_change": -2.56,
-      "price": 4399.7,
-      "prev_close": 4515.2
+      "symbol": "AMBUJACEM.NS",
+      "side": "LONG",
+      "pct_change": 3.68,
+      "price": 360.85,
+      "prev_close": 348.05
     },
     {
-      "symbol": "HINDZINC.NS",
-      "side": "SHORT",
-      "pct_change": -2.44,
-      "price": 503.9,
-      "prev_close": 516.5
+      "symbol": "MAXHEALTH.NS",
+      "side": "LONG",
+      "pct_change": 3.67,
+      "price": 891.6,
+      "prev_close": 860.0
     },
     {
-      "symbol": "CGPOWER.NS",
-      "side": "SHORT",
-      "pct_change": -2.16,
-      "price": 811.85,
-      "prev_close": 829.8
+      "symbol": "JIOFIN.NS",
+      "side": "LONG",
+      "pct_change": 3.58,
+      "price": 211.82,
+      "prev_close": 204.5
     }
   ]
 }
