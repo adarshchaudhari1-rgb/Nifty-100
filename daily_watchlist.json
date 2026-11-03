@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-02",
-  "selected_at": "2026-11-02 10:00:20",
+  "date": "2026-11-03",
+  "selected_at": "2026-11-03 10:00:20",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "RELIANCE.NS": "NSE_EQ|INE002A01018",
-    "TATASTEEL.NS": "NSE_EQ|INE081A01020",
-    "AMBUJACEM.NS": "NSE_EQ|INE079A01024",
-    "MAXHEALTH.NS": "NSE_EQ|INE027H01010",
-    "JIOFIN.NS": "NSE_EQ|INE758E01017"
+    "MAZDOCK.NS": "NSE_EQ|INE249Z01020",
+    "BOSCHLTD.NS": "NSE_EQ|INE323A01026",
+    "BRITANNIA.NS": "NSE_EQ|INE216A01030",
+    "IOC.NS": "NSE_EQ|INE242A01010",
+    "AMBUJACEM.NS": "NSE_EQ|INE079A01024"
   },
   "stocks_with_data": 100,
-  "green": 85,
-  "red": 15,
-  "green_pct": 85.0,
+  "green": 76,
+  "red": 24,
+  "green_pct": 76.0,
   "nature": "BULLISH",
   "stocks": [
     {
-      "symbol": "RELIANCE.NS",
+      "symbol": "MAZDOCK.NS",
       "side": "LONG",
-      "pct_change": 6.12,
-      "price": 1236.2,
-      "prev_close": 1164.9
+      "pct_change": 5.26,
+      "price": 1828.0,
+      "prev_close": 1736.6
     },
     {
-      "symbol": "TATASTEEL.NS",
+      "symbol": "BOSCHLTD.NS",
       "side": "LONG",
-      "pct_change": 3.94,
-      "price": 174.2,
-      "prev_close": 167.6
+      "pct_change": 3.47,
+      "price": 49770.0,
+      "prev_close": 48100.0
+    },
+    {
+      "symbol": "BRITANNIA.NS",
+      "side": "LONG",
+      "pct_change": 3.1,
+      "price": 4778.7,
+      "prev_close": 4635.0
+    },
+    {
+      "symbol": "IOC.NS",
+      "side": "LONG",
+      "pct_change": 2.89,
+      "price": 138.48,
+      "prev_close": 134.59
     },
     {
       "symbol": "AMBUJACEM.NS",
       "side": "LONG",
-      "pct_change": 3.68,
-      "price": 360.85,
-      "prev_close": 348.05
-    },
-    {
-      "symbol": "MAXHEALTH.NS",
-      "side": "LONG",
-      "pct_change": 3.67,
-      "price": 891.6,
-      "prev_close": 860.0
-    },
-    {
-      "symbol": "JIOFIN.NS",
-      "side": "LONG",
-      "pct_change": 3.58,
-      "price": 211.82,
-      "prev_close": 204.5
+      "pct_change": 2.72,
+      "price": 370.0,
+      "prev_close": 360.2
     }
   ]
 }
