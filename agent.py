@@ -15,6 +15,7 @@ Other commands:
 """
 
 import argparse
+from datetime import datetime
 
 import pandas as pd
 
@@ -39,6 +40,12 @@ def manage_open_trade(trader: PaperTrader, symbol: str, df: pd.DataFrame, now):
     miss an SL/target), then square off at the end of the day."""
     trade = trader.open_trades.get(symbol)
     if trade is None or df.empty:
+        return None
+    # A run that comes late (after 3:15 PM) must not use candles after the square-off time:
+    # only candles that finished by 3:15 count, and the trade closes at that price.
+    cutoff = pd.Timestamp(datetime.combine(now.date(), config.SQUARE_OFF_TIME), tz=data.IST)
+    df = df[df.index + pd.Timedelta(minutes=data.CANDLE_MINUTES) <= cutoff]
+    if df.empty:
         return None
     last = pd.Timestamp(trade.get("last_checked") or trade["entry_time"])
     for _, candle in df[df.index > last].iterrows():
