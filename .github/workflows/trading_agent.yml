@@ -41,11 +41,19 @@ jobs:
           END=$(date -u -d "10:05" +%s)          # 3:35 PM IST
           save() {
             git add trade_log.json daily_watchlist.json 2>/dev/null || true
-            if ! git diff --cached --quiet; then
-              git commit -q -m "update trades"
-              git pull -q --rebase || true
-              git push -q || true
-            fi
+            git diff --cached --quiet || git commit -q -m "update trades"
+            # Push everything not yet on GitHub. A failed push (e.g. a GitHub
+            # server error) is retried now and again on every later check,
+            # so a closed trade can't stay "open" on GitHub.
+            for i in 1 2 3 4; do
+              git fetch -q origin main || { sleep 10; continue; }
+              [ "$(git rev-list --count origin/main..HEAD)" = "0" ] && return 0
+              git rebase -q origin/main || { git rebase --abort; return 0; }
+              git push -q origin HEAD:main && return 0
+              echo "Push failed (attempt $i) - retrying"
+              sleep 15
+            done
+            echo "Could not save to GitHub yet - will retry at the next check"
           }
           while true; do
             NOW=$(date +%s)

@@ -498,15 +498,15 @@
       "trail_stage": "none",
       "entry_time": "2026-11-04 13:55:00+05:30",
       "last_checked": "2026-11-04 15:25:00+05:30",
-      "exit_price": 2709.2,
-      "exit_time": "2026-11-04 15:25:00+05:30",
+      "exit_price": 2701.4,
+      "exit_time": "2026-11-04 15:10:00+05:30",
       "outcome": "EOD",
-      "pnl_pct": 0.31,
-      "pnl_rupees": 390.1,
-      "capital_after": 56515.43
+      "pnl_pct": 0.02,
+      "pnl_rupees": 23.5,
+      "capital_after": 56148.83
     }
   ],
-  "capital": 56515.43,
+  "capital": 56148.83,
   "deposits_total": 2000,
   "last_deposit_month": "2026-11"
 }
