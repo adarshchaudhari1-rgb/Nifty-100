@@ -1,21 +1,5 @@
 {
-  "open": {
-    "ADANIENT.NS": {
-      "symbol": "ADANIENT.NS",
-      "direction": "LONG",
-      "pattern": "Range Breakout",
-      "entry": 2700.9,
-      "initial_sl": 2685.6565,
-      "sl": 2685.6565,
-      "target": 2731.387,
-      "risk": 15.24350000000004,
-      "qty": 47,
-      "position_value": 126942.3,
-      "trail_stage": "none",
-      "entry_time": "2026-11-04 13:55:00+05:30",
-      "last_checked": "2026-11-04 15:00:00+05:30"
-    }
-  },
+  "open": {},
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
@@ -499,9 +483,30 @@
       "pnl_pct": 1.5,
       "pnl_rupees": 2141.75,
       "capital_after": 56125.33
+    },
+    {
+      "symbol": "ADANIENT.NS",
+      "direction": "LONG",
+      "pattern": "Range Breakout",
+      "entry": 2700.9,
+      "initial_sl": 2685.6565,
+      "sl": 2685.6565,
+      "target": 2731.387,
+      "risk": 15.24350000000004,
+      "qty": 47,
+      "position_value": 126942.3,
+      "trail_stage": "none",
+      "entry_time": "2026-11-04 13:55:00+05:30",
+      "last_checked": "2026-11-04 15:25:00+05:30",
+      "exit_price": 2709.2,
+      "exit_time": "2026-11-04 15:25:00+05:30",
+      "outcome": "EOD",
+      "pnl_pct": 0.31,
+      "pnl_rupees": 390.1,
+      "capital_after": 56515.43
     }
   ],
-  "capital": 56125.33,
+  "capital": 56515.43,
   "deposits_total": 2000,
   "last_deposit_month": "2026-11"
 }
