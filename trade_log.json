@@ -1,19 +1,19 @@
 {
   "open": {
-    "POWERINDIA.NS": {
-      "symbol": "POWERINDIA.NS",
+    "ADANIENT.NS": {
+      "symbol": "ADANIENT.NS",
       "direction": "LONG",
-      "pattern": "Pullback Breakout",
-      "entry": 28550.0,
-      "initial_sl": 28335.825,
-      "sl": 28550.0,
-      "target": 28978.35,
-      "risk": 214.17499999999927,
-      "qty": 5,
-      "position_value": 142750.0,
-      "trail_stage": "breakeven",
-      "entry_time": "2026-11-04 11:35:00+05:30",
-      "last_checked": "2026-11-04 13:45:00+05:30"
+      "pattern": "Range Breakout",
+      "entry": 2700.9,
+      "initial_sl": 2685.6565,
+      "sl": 2685.6565,
+      "target": 2731.387,
+      "risk": 15.24350000000004,
+      "qty": 47,
+      "position_value": 126942.3,
+      "trail_stage": "none",
+      "entry_time": "2026-11-04 13:55:00+05:30",
+      "last_checked": "2026-11-04 13:50:00+05:30"
     }
   },
   "closed": [
@@ -478,9 +478,30 @@
       "pnl_pct": 0.23,
       "pnl_rupees": 492.0,
       "capital_after": 53983.58
+    },
+    {
+      "symbol": "POWERINDIA.NS",
+      "direction": "LONG",
+      "pattern": "Pullback Breakout",
+      "entry": 28550.0,
+      "initial_sl": 28335.825,
+      "sl": 28550.0,
+      "target": 28978.35,
+      "risk": 214.17499999999927,
+      "qty": 5,
+      "position_value": 142750.0,
+      "trail_stage": "breakeven",
+      "entry_time": "2026-11-04 11:35:00+05:30",
+      "last_checked": "2026-11-04 13:45:00+05:30",
+      "exit_price": 28978.35,
+      "exit_time": "2026-11-04 13:50:00+05:30",
+      "outcome": "TARGET",
+      "pnl_pct": 1.5,
+      "pnl_rupees": 2141.75,
+      "capital_after": 56125.33
     }
   ],
-  "capital": 53983.58,
+  "capital": 56125.33,
   "deposits_total": 2000,
   "last_deposit_month": "2026-11"
 }
