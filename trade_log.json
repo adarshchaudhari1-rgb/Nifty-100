@@ -6,14 +6,14 @@
       "pattern": "Pullback Breakout",
       "entry": 28550.0,
       "initial_sl": 28335.825,
-      "sl": 28335.825,
+      "sl": 28550.0,
       "target": 28978.35,
       "risk": 214.17499999999927,
       "qty": 5,
       "position_value": 142750.0,
-      "trail_stage": "none",
+      "trail_stage": "breakeven",
       "entry_time": "2026-11-04 11:35:00+05:30",
-      "last_checked": "2026-11-04 13:30:00+05:30"
+      "last_checked": "2026-11-04 13:35:00+05:30"
     }
   },
   "closed": [
