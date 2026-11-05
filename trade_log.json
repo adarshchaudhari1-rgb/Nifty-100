@@ -1,21 +1,5 @@
 {
-  "open": {
-    "SHRIRAMFIN.NS": {
-      "symbol": "SHRIRAMFIN.NS",
-      "direction": "LONG",
-      "pattern": "Pullback Breakout",
-      "entry": 967.85,
-      "initial_sl": 960.369575,
-      "sl": 960.369575,
-      "target": 982.81085,
-      "risk": 7.480424999999968,
-      "qty": 150,
-      "position_value": 145177.5,
-      "trail_stage": "none",
-      "entry_time": "2026-11-05 13:20:00+05:30",
-      "last_checked": "2026-11-05 15:05:00+05:30"
-    }
-  },
+  "open": {},
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
@@ -541,9 +525,30 @@
       "pnl_pct": -1.25,
       "pnl_rupees": -1120.59,
       "capital_after": 55028.24
+    },
+    {
+      "symbol": "SHRIRAMFIN.NS",
+      "direction": "LONG",
+      "pattern": "Pullback Breakout",
+      "entry": 967.85,
+      "initial_sl": 960.369575,
+      "sl": 960.369575,
+      "target": 982.81085,
+      "risk": 7.480424999999968,
+      "qty": 150,
+      "position_value": 145177.5,
+      "trail_stage": "none",
+      "entry_time": "2026-11-05 13:20:00+05:30",
+      "last_checked": "2026-11-05 15:10:00+05:30",
+      "exit_price": 963.9,
+      "exit_time": "2026-11-05 15:10:00+05:30",
+      "outcome": "EOD",
+      "pnl_pct": -0.41,
+      "pnl_rupees": -592.5,
+      "capital_after": 54435.74
     }
   ],
-  "capital": 55028.24,
+  "capital": 54435.74,
   "deposits_total": 2000,
   "last_deposit_month": "2026-11"
 }
