@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-04",
-  "selected_at": "2026-11-04 10:00:21",
+  "date": "2026-11-05",
+  "selected_at": "2026-11-05 10:00:21",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "BAJAJFINSV.NS": "NSE_EQ|INE918I01026",
-    "ADANIENT.NS": "NSE_EQ|INE423A01024",
-    "ITC.NS": "NSE_EQ|INE154A01025",
-    "POWERINDIA.NS": "NSE_EQ|INE07Y701011",
-    "BEL.NS": "NSE_EQ|INE263A01024"
+    "TMCV.NS": "NSE_EQ|INE1TAE01010",
+    "SHRIRAMFIN.NS": "NSE_EQ|INE721A01047",
+    "CHOLAFIN.NS": "NSE_EQ|INE121A01024",
+    "HDFCAMC.NS": "NSE_EQ|INE127D01025",
+    "MARUTI.NS": "NSE_EQ|INE585B01010"
   },
   "stocks_with_data": 100,
-  "green": 73,
-  "red": 27,
-  "green_pct": 73.0,
+  "green": 79,
+  "red": 21,
+  "green_pct": 79.0,
   "nature": "BULLISH",
   "stocks": [
     {
-      "symbol": "BAJAJFINSV.NS",
+      "symbol": "TMCV.NS",
       "side": "LONG",
-      "pct_change": 3.65,
-      "price": 1780.8,
-      "prev_close": 1718.1
+      "pct_change": 7.19,
+      "price": 431.75,
+      "prev_close": 402.8
     },
     {
-      "symbol": "ADANIENT.NS",
+      "symbol": "SHRIRAMFIN.NS",
       "side": "LONG",
-      "pct_change": 3.19,
-      "price": 2676.0,
-      "prev_close": 2593.3
+      "pct_change": 5.68,
+      "price": 960.35,
+      "prev_close": 908.75
     },
     {
-      "symbol": "ITC.NS",
+      "symbol": "CHOLAFIN.NS",
       "side": "LONG",
-      "pct_change": 3.18,
-      "price": 282.6,
-      "prev_close": 273.9
+      "pct_change": 5.52,
+      "price": 1749.6,
+      "prev_close": 1658.0
     },
     {
-      "symbol": "POWERINDIA.NS",
+      "symbol": "HDFCAMC.NS",
       "side": "LONG",
-      "pct_change": 2.79,
-      "price": 28040.0,
-      "prev_close": 27280.0
+      "pct_change": 5.03,
+      "price": 2630.9,
+      "prev_close": 2505.0
     },
     {
-      "symbol": "BEL.NS",
+      "symbol": "MARUTI.NS",
       "side": "LONG",
-      "pct_change": 2.58,
-      "price": 389.9,
-      "prev_close": 380.1
+      "pct_change": 4.84,
+      "price": 12575.0,
+      "prev_close": 11995.0
     }
   ]
 }
