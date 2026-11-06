@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-05",
-  "selected_at": "2026-11-05 10:00:21",
+  "date": "2026-11-06",
+  "selected_at": "2026-11-06 10:00:20",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "TMCV.NS": "NSE_EQ|INE1TAE01010",
-    "SHRIRAMFIN.NS": "NSE_EQ|INE721A01047",
-    "CHOLAFIN.NS": "NSE_EQ|INE121A01024",
-    "HDFCAMC.NS": "NSE_EQ|INE127D01025",
-    "MARUTI.NS": "NSE_EQ|INE585B01010"
+    "CGPOWER.NS": "NSE_EQ|INE067A01029",
+    "MOTHERSON.NS": "NSE_EQ|INE775A01035",
+    "POWERINDIA.NS": "NSE_EQ|INE07Y701011",
+    "ENRIN.NS": "NSE_EQ|INE1NPP01017",
+    "HAL.NS": "NSE_EQ|INE066F01020"
   },
   "stocks_with_data": 100,
-  "green": 79,
-  "red": 21,
-  "green_pct": 79.0,
-  "nature": "BULLISH",
+  "green": 36,
+  "red": 64,
+  "green_pct": 36.0,
+  "nature": "BEARISH",
   "stocks": [
     {
-      "symbol": "TMCV.NS",
-      "side": "LONG",
-      "pct_change": 7.19,
-      "price": 431.75,
-      "prev_close": 402.8
+      "symbol": "CGPOWER.NS",
+      "side": "SHORT",
+      "pct_change": -8.21,
+      "price": 742.4,
+      "prev_close": 808.8
     },
     {
-      "symbol": "SHRIRAMFIN.NS",
-      "side": "LONG",
-      "pct_change": 5.68,
-      "price": 960.35,
-      "prev_close": 908.75
+      "symbol": "MOTHERSON.NS",
+      "side": "SHORT",
+      "pct_change": -6.02,
+      "price": 157.88,
+      "prev_close": 168.0
     },
     {
-      "symbol": "CHOLAFIN.NS",
-      "side": "LONG",
-      "pct_change": 5.52,
-      "price": 1749.6,
-      "prev_close": 1658.0
+      "symbol": "POWERINDIA.NS",
+      "side": "SHORT",
+      "pct_change": -4.66,
+      "price": 26885.0,
+      "prev_close": 28200.0
     },
     {
-      "symbol": "HDFCAMC.NS",
-      "side": "LONG",
-      "pct_change": 5.03,
-      "price": 2630.9,
-      "prev_close": 2505.0
+      "symbol": "ENRIN.NS",
+      "side": "SHORT",
+      "pct_change": -3.92,
+      "price": 2747.0,
+      "prev_close": 2859.0
     },
     {
-      "symbol": "MARUTI.NS",
-      "side": "LONG",
-      "pct_change": 4.84,
-      "price": 12575.0,
-      "prev_close": 11995.0
+      "symbol": "HAL.NS",
+      "side": "SHORT",
+      "pct_change": -3.63,
+      "price": 4860.0,
+      "prev_close": 5043.0
     }
   ]
 }
