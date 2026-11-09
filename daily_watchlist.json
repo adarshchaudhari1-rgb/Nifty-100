@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-06",
-  "selected_at": "2026-11-06 10:00:20",
+  "date": "2026-11-09",
+  "selected_at": "2026-11-09 10:00:20",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "CGPOWER.NS": "NSE_EQ|INE067A01029",
-    "MOTHERSON.NS": "NSE_EQ|INE775A01035",
-    "POWERINDIA.NS": "NSE_EQ|INE07Y701011",
-    "ENRIN.NS": "NSE_EQ|INE1NPP01017",
-    "HAL.NS": "NSE_EQ|INE066F01020"
+    "BOSCHLTD.NS": "NSE_EQ|INE323A01026",
+    "HCLTECH.NS": "NSE_EQ|INE860A01027",
+    "IDEA.NS": "NSE_EQ|INE669E01016",
+    "INFY.NS": "NSE_EQ|INE009A01021",
+    "BHARTIARTL.NS": "NSE_EQ|INE397D01024"
   },
   "stocks_with_data": 100,
-  "green": 36,
-  "red": 64,
-  "green_pct": 36.0,
+  "green": 40,
+  "red": 59,
+  "green_pct": 40.4,
   "nature": "BEARISH",
   "stocks": [
     {
-      "symbol": "CGPOWER.NS",
+      "symbol": "BOSCHLTD.NS",
       "side": "SHORT",
-      "pct_change": -8.21,
-      "price": 742.4,
-      "prev_close": 808.8
+      "pct_change": -2.6,
+      "price": 49480.0,
+      "prev_close": 50800.0
     },
     {
-      "symbol": "MOTHERSON.NS",
+      "symbol": "HCLTECH.NS",
       "side": "SHORT",
-      "pct_change": -6.02,
-      "price": 157.88,
-      "prev_close": 168.0
+      "pct_change": -1.8,
+      "price": 1416.1,
+      "prev_close": 1442.0
     },
     {
-      "symbol": "POWERINDIA.NS",
+      "symbol": "IDEA.NS",
       "side": "SHORT",
-      "pct_change": -4.66,
-      "price": 26885.0,
-      "prev_close": 28200.0
+      "pct_change": -1.8,
+      "price": 12.58,
+      "prev_close": 12.81
     },
     {
-      "symbol": "ENRIN.NS",
+      "symbol": "INFY.NS",
       "side": "SHORT",
-      "pct_change": -3.92,
-      "price": 2747.0,
-      "prev_close": 2859.0
+      "pct_change": -1.71,
+      "price": 1151.6,
+      "prev_close": 1171.6
     },
     {
-      "symbol": "HAL.NS",
+      "symbol": "BHARTIARTL.NS",
       "side": "SHORT",
-      "pct_change": -3.63,
-      "price": 4860.0,
-      "prev_close": 5043.0
+      "pct_change": -1.71,
+      "price": 2049.9,
+      "prev_close": 2085.5
     }
   ]
 }
