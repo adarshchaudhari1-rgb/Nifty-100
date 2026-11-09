@@ -1,5 +1,21 @@
 {
-  "open": {},
+  "open": {
+    "HCLTECH.NS": {
+      "symbol": "HCLTECH.NS",
+      "direction": "SHORT",
+      "pattern": "Range Breakout",
+      "entry": 1406.6,
+      "initial_sl": 1413.7065,
+      "sl": 1413.7065,
+      "target": 1392.3869999999997,
+      "risk": 7.106500000000096,
+      "qty": 153,
+      "position_value": 215209.8,
+      "trail_stage": "none",
+      "entry_time": "2026-11-09 10:45:00+05:30",
+      "last_checked": "2026-11-09 10:40:00+05:30"
+    }
+  },
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
