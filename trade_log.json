@@ -1,5 +1,21 @@
 {
-  "open": {},
+  "open": {
+    "BANKBARODA.NS": {
+      "symbol": "BANKBARODA.NS",
+      "direction": "LONG",
+      "pattern": "Pullback Breakout",
+      "entry": 273.12,
+      "initial_sl": 270.24481000000003,
+      "sl": 270.24481000000003,
+      "target": 278.87037999999995,
+      "risk": 2.875189999999975,
+      "qty": 371,
+      "position_value": 101327.52,
+      "trail_stage": "none",
+      "entry_time": "2026-11-11 11:35:00+05:30",
+      "last_checked": "2026-11-11 11:30:00+05:30"
+    }
+  },
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
