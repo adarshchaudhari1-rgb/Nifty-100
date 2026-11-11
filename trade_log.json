@@ -1,21 +1,5 @@
 {
-  "open": {
-    "BANKBARODA.NS": {
-      "symbol": "BANKBARODA.NS",
-      "direction": "LONG",
-      "pattern": "Pullback Breakout",
-      "entry": 273.12,
-      "initial_sl": 270.24481000000003,
-      "sl": 270.24481000000003,
-      "target": 278.87037999999995,
-      "risk": 2.875189999999975,
-      "qty": 371,
-      "position_value": 101327.52,
-      "trail_stage": "none",
-      "entry_time": "2026-11-11 11:35:00+05:30",
-      "last_checked": "2026-11-11 15:05:00+05:30"
-    }
-  },
+  "open": {},
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
@@ -625,9 +609,30 @@
       "pnl_pct": -1.08,
       "pnl_rupees": -958.9,
       "capital_after": 51330.11
+    },
+    {
+      "symbol": "BANKBARODA.NS",
+      "direction": "LONG",
+      "pattern": "Pullback Breakout",
+      "entry": 273.12,
+      "initial_sl": 270.24481000000003,
+      "sl": 270.24481000000003,
+      "target": 278.87037999999995,
+      "risk": 2.875189999999975,
+      "qty": 371,
+      "position_value": 101327.52,
+      "trail_stage": "none",
+      "entry_time": "2026-11-11 11:35:00+05:30",
+      "last_checked": "2026-11-11 15:10:00+05:30",
+      "exit_price": 273.62,
+      "exit_time": "2026-11-11 15:10:00+05:30",
+      "outcome": "EOD",
+      "pnl_pct": 0.18,
+      "pnl_rupees": 185.5,
+      "capital_after": 51515.61
     }
   ],
-  "capital": 51330.11,
+  "capital": 51515.61,
   "deposits_total": 2000,
   "last_deposit_month": "2026-11"
 }
