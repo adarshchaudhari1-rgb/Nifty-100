@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-09",
-  "selected_at": "2026-11-09 10:00:20",
+  "date": "2026-11-11",
+  "selected_at": "2026-11-11 10:00:20",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "BOSCHLTD.NS": "NSE_EQ|INE323A01026",
-    "HCLTECH.NS": "NSE_EQ|INE860A01027",
-    "IDEA.NS": "NSE_EQ|INE669E01016",
-    "INFY.NS": "NSE_EQ|INE009A01021",
-    "BHARTIARTL.NS": "NSE_EQ|INE397D01024"
+    "INDIGO.NS": "NSE_EQ|INE646L01027",
+    "M&M.NS": "NSE_EQ|INE101A01026",
+    "POWERINDIA.NS": "NSE_EQ|INE07Y701011",
+    "BANKBARODA.NS": "NSE_EQ|INE028A01039",
+    "ENRIN.NS": "NSE_EQ|INE1NPP01017"
   },
   "stocks_with_data": 100,
-  "green": 40,
-  "red": 59,
-  "green_pct": 40.4,
-  "nature": "BEARISH",
+  "green": 85,
+  "red": 14,
+  "green_pct": 85.9,
+  "nature": "BULLISH",
   "stocks": [
     {
-      "symbol": "BOSCHLTD.NS",
-      "side": "SHORT",
-      "pct_change": -2.6,
-      "price": 49480.0,
-      "prev_close": 50800.0
+      "symbol": "INDIGO.NS",
+      "side": "LONG",
+      "pct_change": 4.59,
+      "price": 5679.0,
+      "prev_close": 5430.0
     },
     {
-      "symbol": "HCLTECH.NS",
-      "side": "SHORT",
-      "pct_change": -1.8,
-      "price": 1416.1,
-      "prev_close": 1442.0
+      "symbol": "M&M.NS",
+      "side": "LONG",
+      "pct_change": 3.48,
+      "price": 3405.1,
+      "prev_close": 3290.6
     },
     {
-      "symbol": "IDEA.NS",
-      "side": "SHORT",
-      "pct_change": -1.8,
-      "price": 12.58,
-      "prev_close": 12.81
+      "symbol": "POWERINDIA.NS",
+      "side": "LONG",
+      "pct_change": 3.46,
+      "price": 29125.0,
+      "prev_close": 28150.0
     },
     {
-      "symbol": "INFY.NS",
-      "side": "SHORT",
-      "pct_change": -1.71,
-      "price": 1151.6,
-      "prev_close": 1171.6
+      "symbol": "BANKBARODA.NS",
+      "side": "LONG",
+      "pct_change": 3.35,
+      "price": 268.73,
+      "prev_close": 260.01
     },
     {
-      "symbol": "BHARTIARTL.NS",
-      "side": "SHORT",
-      "pct_change": -1.71,
-      "price": 2049.9,
-      "prev_close": 2085.5
+      "symbol": "ENRIN.NS",
+      "side": "LONG",
+      "pct_change": 3.3,
+      "price": 2930.8,
+      "prev_close": 2837.2
     }
   ]
 }
