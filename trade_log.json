@@ -1,5 +1,21 @@
 {
-  "open": {},
+  "open": {
+    "INDIGO.NS": {
+      "symbol": "INDIGO.NS",
+      "direction": "LONG",
+      "pattern": "Pullback Breakout",
+      "entry": 5698.7,
+      "initial_sl": 5662.1675000000005,
+      "sl": 5662.1675000000005,
+      "target": 5771.7649999999985,
+      "risk": 36.532499999999345,
+      "qty": 29,
+      "position_value": 165262.3,
+      "trail_stage": "none",
+      "entry_time": "2026-11-11 10:35:00+05:30",
+      "last_checked": "2026-11-11 10:30:00+05:30"
+    }
+  },
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
