@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-12",
-  "selected_at": "2026-11-12 10:00:20",
+  "date": "2026-11-13",
+  "selected_at": "2026-11-13 17:50:59",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "POLYCAB.NS": "NSE_EQ|INE455K01017",
-    "HDFCLIFE.NS": "NSE_EQ|INE795G01014",
-    "BAJAJFINSV.NS": "NSE_EQ|INE918I01026",
+    "MUTHOOTFIN.NS": "NSE_EQ|INE414G01012",
     "TMCV.NS": "NSE_EQ|INE1TAE01010",
-    "CHOLAFIN.NS": "NSE_EQ|INE121A01024"
+    "IDEA.NS": "NSE_EQ|INE669E01016",
+    "SHRIRAMFIN.NS": "NSE_EQ|INE721A01047",
+    "BPCL.NS": "NSE_EQ|INE029A01011"
   },
   "stocks_with_data": 100,
-  "green": 68,
-  "red": 32,
-  "green_pct": 68.0,
-  "nature": "BULLISH",
+  "green": 40,
+  "red": 59,
+  "green_pct": 40.4,
+  "nature": "BEARISH",
   "stocks": [
     {
-      "symbol": "POLYCAB.NS",
-      "side": "LONG",
-      "pct_change": 3.5,
-      "price": 8226.0,
-      "prev_close": 7948.0
-    },
-    {
-      "symbol": "HDFCLIFE.NS",
-      "side": "LONG",
-      "pct_change": 3.03,
-      "price": 590.9,
-      "prev_close": 573.55
-    },
-    {
-      "symbol": "BAJAJFINSV.NS",
-      "side": "LONG",
-      "pct_change": 3.01,
-      "price": 1900.6,
-      "prev_close": 1845.0
+      "symbol": "MUTHOOTFIN.NS",
+      "side": "SHORT",
+      "pct_change": -2.57,
+      "price": 2857.6,
+      "prev_close": 2932.9
     },
     {
       "symbol": "TMCV.NS",
-      "side": "LONG",
-      "pct_change": 2.53,
-      "price": 457.35,
-      "prev_close": 446.05
+      "side": "SHORT",
+      "pct_change": -2.53,
+      "price": 441.95,
+      "prev_close": 453.4
     },
     {
-      "symbol": "CHOLAFIN.NS",
-      "side": "LONG",
-      "pct_change": 2.47,
-      "price": 1859.6,
-      "prev_close": 1814.8
+      "symbol": "IDEA.NS",
+      "side": "SHORT",
+      "pct_change": -2.39,
+      "price": 12.66,
+      "prev_close": 12.97
+    },
+    {
+      "symbol": "SHRIRAMFIN.NS",
+      "side": "SHORT",
+      "pct_change": -1.92,
+      "price": 984.5,
+      "prev_close": 1003.8
+    },
+    {
+      "symbol": "BPCL.NS",
+      "side": "SHORT",
+      "pct_change": -1.72,
+      "price": 306.15,
+      "prev_close": 311.5
     }
   ]
 }
