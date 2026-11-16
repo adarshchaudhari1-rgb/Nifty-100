@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-13",
-  "selected_at": "2026-11-13 17:50:59",
+  "date": "2026-11-16",
+  "selected_at": "2026-11-16 18:24:26",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "MUTHOOTFIN.NS": "NSE_EQ|INE414G01012",
-    "TMCV.NS": "NSE_EQ|INE1TAE01010",
-    "IDEA.NS": "NSE_EQ|INE669E01016",
-    "SHRIRAMFIN.NS": "NSE_EQ|INE721A01047",
-    "BPCL.NS": "NSE_EQ|INE029A01011"
+    "MAXHEALTH.NS": "NSE_EQ|INE027H01010",
+    "PNB.NS": "NSE_EQ|INE160A01022",
+    "BHARTIARTL.NS": "NSE_EQ|INE397D01024",
+    "ITC.NS": "NSE_EQ|INE154A01025",
+    "ASIANPAINT.NS": "NSE_EQ|INE021A01026"
   },
   "stocks_with_data": 100,
-  "green": 40,
-  "red": 59,
-  "green_pct": 40.4,
-  "nature": "BEARISH",
+  "green": 61,
+  "red": 39,
+  "green_pct": 61.0,
+  "nature": "BULLISH",
   "stocks": [
     {
-      "symbol": "MUTHOOTFIN.NS",
-      "side": "SHORT",
-      "pct_change": -2.57,
-      "price": 2857.6,
-      "prev_close": 2932.9
+      "symbol": "MAXHEALTH.NS",
+      "side": "LONG",
+      "pct_change": 4.37,
+      "price": 988.5,
+      "prev_close": 947.1
     },
     {
-      "symbol": "TMCV.NS",
-      "side": "SHORT",
-      "pct_change": -2.53,
-      "price": 441.95,
-      "prev_close": 453.4
+      "symbol": "PNB.NS",
+      "side": "LONG",
+      "pct_change": 2.58,
+      "price": 146.5,
+      "prev_close": 142.81
     },
     {
-      "symbol": "IDEA.NS",
-      "side": "SHORT",
-      "pct_change": -2.39,
-      "price": 12.66,
-      "prev_close": 12.97
+      "symbol": "BHARTIARTL.NS",
+      "side": "LONG",
+      "pct_change": 2.54,
+      "price": 2159.5,
+      "prev_close": 2106.0
     },
     {
-      "symbol": "SHRIRAMFIN.NS",
-      "side": "SHORT",
-      "pct_change": -1.92,
-      "price": 984.5,
-      "prev_close": 1003.8
+      "symbol": "ITC.NS",
+      "side": "LONG",
+      "pct_change": 2.42,
+      "price": 291.9,
+      "prev_close": 285.0
     },
     {
-      "symbol": "BPCL.NS",
-      "side": "SHORT",
-      "pct_change": -1.72,
-      "price": 306.15,
-      "prev_close": 311.5
+      "symbol": "ASIANPAINT.NS",
+      "side": "LONG",
+      "pct_change": 2.31,
+      "price": 2608.8,
+      "prev_close": 2550.0
     }
   ]
 }
