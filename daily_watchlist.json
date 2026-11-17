@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-16",
-  "selected_at": "2026-11-16 18:24:26",
+  "date": "2026-11-17",
+  "selected_at": "2026-11-17 19:06:53",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "MAXHEALTH.NS": "NSE_EQ|INE027H01010",
     "PNB.NS": "NSE_EQ|INE160A01022",
-    "BHARTIARTL.NS": "NSE_EQ|INE397D01024",
-    "ITC.NS": "NSE_EQ|INE154A01025",
-    "ASIANPAINT.NS": "NSE_EQ|INE021A01026"
+    "TMCV.NS": "NSE_EQ|INE1TAE01010",
+    "CANBK.NS": "NSE_EQ|INE476A01022",
+    "ASIANPAINT.NS": "NSE_EQ|INE021A01026",
+    "HDFCAMC.NS": "NSE_EQ|INE127D01025"
   },
   "stocks_with_data": 100,
-  "green": 61,
-  "red": 39,
-  "green_pct": 61.0,
+  "green": 67,
+  "red": 33,
+  "green_pct": 67.0,
   "nature": "BULLISH",
   "stocks": [
     {
-      "symbol": "MAXHEALTH.NS",
-      "side": "LONG",
-      "pct_change": 4.37,
-      "price": 988.5,
-      "prev_close": 947.1
-    },
-    {
       "symbol": "PNB.NS",
       "side": "LONG",
-      "pct_change": 2.58,
-      "price": 146.5,
-      "prev_close": 142.81
+      "pct_change": 4.05,
+      "price": 150.45,
+      "prev_close": 144.59
     },
     {
-      "symbol": "BHARTIARTL.NS",
+      "symbol": "TMCV.NS",
       "side": "LONG",
-      "pct_change": 2.54,
-      "price": 2159.5,
-      "prev_close": 2106.0
+      "pct_change": 3.55,
+      "price": 443.45,
+      "prev_close": 428.25
     },
     {
-      "symbol": "ITC.NS",
+      "symbol": "CANBK.NS",
       "side": "LONG",
-      "pct_change": 2.42,
-      "price": 291.9,
-      "prev_close": 285.0
+      "pct_change": 2.91,
+      "price": 136.25,
+      "prev_close": 132.4
     },
     {
       "symbol": "ASIANPAINT.NS",
       "side": "LONG",
       "pct_change": 2.31,
-      "price": 2608.8,
-      "prev_close": 2550.0
+      "price": 2632.3,
+      "prev_close": 2572.9
+    },
+    {
+      "symbol": "HDFCAMC.NS",
+      "side": "LONG",
+      "pct_change": 2.15,
+      "price": 2706.9,
+      "prev_close": 2650.0
     }
   ]
 }
