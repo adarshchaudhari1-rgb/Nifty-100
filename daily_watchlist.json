@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-17",
-  "selected_at": "2026-11-17 19:06:53",
+  "date": "2026-11-18",
+  "selected_at": "2026-11-18 18:41:35",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "PNB.NS": "NSE_EQ|INE160A01022",
-    "TMCV.NS": "NSE_EQ|INE1TAE01010",
-    "CANBK.NS": "NSE_EQ|INE476A01022",
-    "ASIANPAINT.NS": "NSE_EQ|INE021A01026",
-    "HDFCAMC.NS": "NSE_EQ|INE127D01025"
+    "MUTHOOTFIN.NS": "NSE_EQ|INE414G01012",
+    "HINDZINC.NS": "NSE_EQ|INE267A01025",
+    "MOTHERSON.NS": "NSE_EQ|INE775A01035",
+    "POLYCAB.NS": "NSE_EQ|INE455K01017",
+    "TITAN.NS": "NSE_EQ|INE280A01028"
   },
   "stocks_with_data": 100,
-  "green": 67,
-  "red": 33,
-  "green_pct": 67.0,
-  "nature": "BULLISH",
+  "green": 20,
+  "red": 80,
+  "green_pct": 20.0,
+  "nature": "BEARISH",
   "stocks": [
     {
-      "symbol": "PNB.NS",
-      "side": "LONG",
-      "pct_change": 4.05,
-      "price": 150.45,
-      "prev_close": 144.59
+      "symbol": "MUTHOOTFIN.NS",
+      "side": "SHORT",
+      "pct_change": -3.33,
+      "price": 2657.4,
+      "prev_close": 2749.0
     },
     {
-      "symbol": "TMCV.NS",
-      "side": "LONG",
-      "pct_change": 3.55,
-      "price": 443.45,
-      "prev_close": 428.25
+      "symbol": "HINDZINC.NS",
+      "side": "SHORT",
+      "pct_change": -3.25,
+      "price": 532.1,
+      "prev_close": 550.0
     },
     {
-      "symbol": "CANBK.NS",
-      "side": "LONG",
-      "pct_change": 2.91,
-      "price": 136.25,
-      "prev_close": 132.4
+      "symbol": "MOTHERSON.NS",
+      "side": "SHORT",
+      "pct_change": -2.57,
+      "price": 160.17,
+      "prev_close": 164.39
     },
     {
-      "symbol": "ASIANPAINT.NS",
-      "side": "LONG",
-      "pct_change": 2.31,
-      "price": 2632.3,
-      "prev_close": 2572.9
+      "symbol": "POLYCAB.NS",
+      "side": "SHORT",
+      "pct_change": -2.41,
+      "price": 7516.0,
+      "prev_close": 7702.0
     },
     {
-      "symbol": "HDFCAMC.NS",
-      "side": "LONG",
-      "pct_change": 2.15,
-      "price": 2706.9,
-      "prev_close": 2650.0
+      "symbol": "TITAN.NS",
+      "side": "SHORT",
+      "pct_change": -2.4,
+      "price": 4790.0,
+      "prev_close": 4908.0
     }
   ]
 }
