@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-18",
-  "selected_at": "2026-11-18 18:41:35",
+  "date": "2026-11-19",
+  "selected_at": "2026-11-19 18:58:08",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "MUTHOOTFIN.NS": "NSE_EQ|INE414G01012",
-    "HINDZINC.NS": "NSE_EQ|INE267A01025",
-    "MOTHERSON.NS": "NSE_EQ|INE775A01035",
-    "POLYCAB.NS": "NSE_EQ|INE455K01017",
-    "TITAN.NS": "NSE_EQ|INE280A01028"
+    "MARUTI.NS": "NSE_EQ|INE585B01010",
+    "PIDILITIND.NS": "NSE_EQ|INE318A01026",
+    "M&M.NS": "NSE_EQ|INE101A01026",
+    "PNB.NS": "NSE_EQ|INE160A01022",
+    "EICHERMOT.NS": "NSE_EQ|INE066A01021"
   },
   "stocks_with_data": 100,
-  "green": 20,
-  "red": 80,
-  "green_pct": 20.0,
-  "nature": "BEARISH",
+  "green": 67,
+  "red": 33,
+  "green_pct": 67.0,
+  "nature": "BULLISH",
   "stocks": [
     {
-      "symbol": "MUTHOOTFIN.NS",
-      "side": "SHORT",
-      "pct_change": -3.33,
-      "price": 2657.4,
-      "prev_close": 2749.0
+      "symbol": "MARUTI.NS",
+      "side": "LONG",
+      "pct_change": 4.92,
+      "price": 13254.0,
+      "prev_close": 12632.0
     },
     {
-      "symbol": "HINDZINC.NS",
-      "side": "SHORT",
-      "pct_change": -3.25,
-      "price": 532.1,
-      "prev_close": 550.0
+      "symbol": "PIDILITIND.NS",
+      "side": "LONG",
+      "pct_change": 3.29,
+      "price": 1580.6,
+      "prev_close": 1530.2
     },
     {
-      "symbol": "MOTHERSON.NS",
-      "side": "SHORT",
-      "pct_change": -2.57,
-      "price": 160.17,
-      "prev_close": 164.39
+      "symbol": "M&M.NS",
+      "side": "LONG",
+      "pct_change": 3.1,
+      "price": 3463.4,
+      "prev_close": 3359.1
     },
     {
-      "symbol": "POLYCAB.NS",
-      "side": "SHORT",
-      "pct_change": -2.41,
-      "price": 7516.0,
-      "prev_close": 7702.0
+      "symbol": "PNB.NS",
+      "side": "LONG",
+      "pct_change": 3.05,
+      "price": 154.13,
+      "prev_close": 149.57
     },
     {
-      "symbol": "TITAN.NS",
-      "side": "SHORT",
-      "pct_change": -2.4,
-      "price": 4790.0,
-      "prev_close": 4908.0
+      "symbol": "EICHERMOT.NS",
+      "side": "LONG",
+      "pct_change": 2.88,
+      "price": 7922.0,
+      "prev_close": 7700.0
     }
   ]
 }
