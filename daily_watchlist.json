@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-19",
-  "selected_at": "2026-11-19 18:58:08",
+  "date": "2026-11-20",
+  "selected_at": "2026-11-20 18:39:23",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "MARUTI.NS": "NSE_EQ|INE585B01010",
-    "PIDILITIND.NS": "NSE_EQ|INE318A01026",
-    "M&M.NS": "NSE_EQ|INE101A01026",
-    "PNB.NS": "NSE_EQ|INE160A01022",
-    "EICHERMOT.NS": "NSE_EQ|INE066A01021"
+    "POWERINDIA.NS": "NSE_EQ|INE07Y701011",
+    "VEDL.NS": "NSE_EQ|INE205A01025",
+    "TITAN.NS": "NSE_EQ|INE280A01028",
+    "TATASTEEL.NS": "NSE_EQ|INE081A01020",
+    "ENRIN.NS": "NSE_EQ|INE1NPP01017"
   },
   "stocks_with_data": 100,
-  "green": 67,
-  "red": 33,
-  "green_pct": 67.0,
-  "nature": "BULLISH",
+  "green": 37,
+  "red": 63,
+  "green_pct": 37.0,
+  "nature": "BEARISH",
   "stocks": [
     {
-      "symbol": "MARUTI.NS",
-      "side": "LONG",
-      "pct_change": 4.92,
-      "price": 13254.0,
-      "prev_close": 12632.0
+      "symbol": "POWERINDIA.NS",
+      "side": "SHORT",
+      "pct_change": -3.48,
+      "price": 29680.0,
+      "prev_close": 30750.0
     },
     {
-      "symbol": "PIDILITIND.NS",
-      "side": "LONG",
-      "pct_change": 3.29,
-      "price": 1580.6,
-      "prev_close": 1530.2
+      "symbol": "VEDL.NS",
+      "side": "SHORT",
+      "pct_change": -3.41,
+      "price": 235.4,
+      "prev_close": 243.7
     },
     {
-      "symbol": "M&M.NS",
-      "side": "LONG",
-      "pct_change": 3.1,
-      "price": 3463.4,
-      "prev_close": 3359.1
+      "symbol": "TITAN.NS",
+      "side": "SHORT",
+      "pct_change": -3.38,
+      "price": 4541.0,
+      "prev_close": 4700.0
     },
     {
-      "symbol": "PNB.NS",
-      "side": "LONG",
-      "pct_change": 3.05,
-      "price": 154.13,
-      "prev_close": 149.57
+      "symbol": "TATASTEEL.NS",
+      "side": "SHORT",
+      "pct_change": -3.26,
+      "price": 175.0,
+      "prev_close": 180.89
     },
     {
-      "symbol": "EICHERMOT.NS",
-      "side": "LONG",
-      "pct_change": 2.88,
-      "price": 7922.0,
-      "prev_close": 7700.0
+      "symbol": "ENRIN.NS",
+      "side": "SHORT",
+      "pct_change": -3.19,
+      "price": 2914.0,
+      "prev_close": 3010.0
     }
   ]
 }
