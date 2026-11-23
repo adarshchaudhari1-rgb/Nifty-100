@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-20",
-  "selected_at": "2026-11-20 18:39:23",
+  "date": "2026-11-23",
+  "selected_at": "2026-11-23 20:24:20",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "POWERINDIA.NS": "NSE_EQ|INE07Y701011",
-    "VEDL.NS": "NSE_EQ|INE205A01025",
-    "TITAN.NS": "NSE_EQ|INE280A01028",
     "TATASTEEL.NS": "NSE_EQ|INE081A01020",
-    "ENRIN.NS": "NSE_EQ|INE1NPP01017"
+    "UNIONBANK.NS": "NSE_EQ|INE692A01016",
+    "BANKBARODA.NS": "NSE_EQ|INE028A01039",
+    "CANBK.NS": "NSE_EQ|INE476A01022",
+    "PNB.NS": "NSE_EQ|INE160A01022"
   },
   "stocks_with_data": 100,
-  "green": 37,
-  "red": 63,
-  "green_pct": 37.0,
+  "green": 29,
+  "red": 70,
+  "green_pct": 29.3,
   "nature": "BEARISH",
   "stocks": [
     {
-      "symbol": "POWERINDIA.NS",
-      "side": "SHORT",
-      "pct_change": -3.48,
-      "price": 29680.0,
-      "prev_close": 30750.0
-    },
-    {
-      "symbol": "VEDL.NS",
-      "side": "SHORT",
-      "pct_change": -3.41,
-      "price": 235.4,
-      "prev_close": 243.7
-    },
-    {
-      "symbol": "TITAN.NS",
-      "side": "SHORT",
-      "pct_change": -3.38,
-      "price": 4541.0,
-      "prev_close": 4700.0
-    },
-    {
       "symbol": "TATASTEEL.NS",
       "side": "SHORT",
-      "pct_change": -3.26,
-      "price": 175.0,
-      "prev_close": 180.89
+      "pct_change": -5.87,
+      "price": 167.56,
+      "prev_close": 178.0
     },
     {
-      "symbol": "ENRIN.NS",
+      "symbol": "UNIONBANK.NS",
       "side": "SHORT",
-      "pct_change": -3.19,
-      "price": 2914.0,
-      "prev_close": 3010.0
+      "pct_change": -4.38,
+      "price": 209.26,
+      "prev_close": 218.85
+    },
+    {
+      "symbol": "BANKBARODA.NS",
+      "side": "SHORT",
+      "pct_change": -3.43,
+      "price": 277.17,
+      "prev_close": 287.0
+    },
+    {
+      "symbol": "CANBK.NS",
+      "side": "SHORT",
+      "pct_change": -3.02,
+      "price": 134.73,
+      "prev_close": 138.92
+    },
+    {
+      "symbol": "PNB.NS",
+      "side": "SHORT",
+      "pct_change": -2.84,
+      "price": 150.92,
+      "prev_close": 155.33
     }
   ]
 }
