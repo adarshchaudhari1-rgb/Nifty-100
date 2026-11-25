@@ -1,55 +1,55 @@
 {
-  "date": "2026-11-23",
-  "selected_at": "2026-11-23 20:24:20",
+  "date": "2026-11-25",
+  "selected_at": "2026-11-25 10:00:20",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
   "instrument_keys": {
-    "TATASTEEL.NS": "NSE_EQ|INE081A01020",
-    "UNIONBANK.NS": "NSE_EQ|INE692A01016",
-    "BANKBARODA.NS": "NSE_EQ|INE028A01039",
-    "CANBK.NS": "NSE_EQ|INE476A01022",
-    "PNB.NS": "NSE_EQ|INE160A01022"
+    "HDFCLIFE.NS": "NSE_EQ|INE795G01014",
+    "INFY.NS": "NSE_EQ|INE009A01021",
+    "ICICIBANK.NS": "NSE_EQ|INE090A01021",
+    "TATACONSUM.NS": "NSE_EQ|INE192A01025",
+    "HDFCBANK.NS": "NSE_EQ|INE040A01034"
   },
   "stocks_with_data": 100,
-  "green": 29,
-  "red": 70,
-  "green_pct": 29.3,
-  "nature": "BEARISH",
+  "green": 73,
+  "red": 26,
+  "green_pct": 73.7,
+  "nature": "BULLISH",
   "stocks": [
     {
-      "symbol": "TATASTEEL.NS",
-      "side": "SHORT",
-      "pct_change": -5.87,
-      "price": 167.56,
-      "prev_close": 178.0
+      "symbol": "HDFCLIFE.NS",
+      "side": "LONG",
+      "pct_change": 5.33,
+      "price": 605.6,
+      "prev_close": 574.95
     },
     {
-      "symbol": "UNIONBANK.NS",
-      "side": "SHORT",
-      "pct_change": -4.38,
-      "price": 209.26,
-      "prev_close": 218.85
+      "symbol": "INFY.NS",
+      "side": "LONG",
+      "pct_change": 3.85,
+      "price": 1145.9,
+      "prev_close": 1103.4
     },
     {
-      "symbol": "BANKBARODA.NS",
-      "side": "SHORT",
-      "pct_change": -3.43,
-      "price": 277.17,
-      "prev_close": 287.0
+      "symbol": "ICICIBANK.NS",
+      "side": "LONG",
+      "pct_change": 3.58,
+      "price": 1642.2,
+      "prev_close": 1585.5
     },
     {
-      "symbol": "CANBK.NS",
-      "side": "SHORT",
-      "pct_change": -3.02,
-      "price": 134.73,
-      "prev_close": 138.92
+      "symbol": "TATACONSUM.NS",
+      "side": "LONG",
+      "pct_change": 3.3,
+      "price": 1170.4,
+      "prev_close": 1133.0
     },
     {
-      "symbol": "PNB.NS",
-      "side": "SHORT",
-      "pct_change": -2.84,
-      "price": 150.92,
-      "prev_close": 155.33
+      "symbol": "HDFCBANK.NS",
+      "side": "LONG",
+      "pct_change": 3.2,
+      "price": 843.95,
+      "prev_close": 817.8
     }
   ]
 }
