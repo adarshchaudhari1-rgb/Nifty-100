@@ -1,5 +1,21 @@
 {
-  "open": {},
+  "open": {
+    "ICICIBANK.NS": {
+      "symbol": "ICICIBANK.NS",
+      "direction": "LONG",
+      "pattern": "Pullback Breakout",
+      "entry": 1648.0,
+      "initial_sl": 1635.182,
+      "sl": 1635.182,
+      "target": 1673.636,
+      "risk": 12.817999999999984,
+      "qty": 80,
+      "position_value": 131840.0,
+      "trail_stage": "none",
+      "entry_time": "2026-11-25 10:40:00+05:30",
+      "last_checked": "2026-11-25 10:35:00+05:30"
+    }
+  },
   "closed": [
     {
       "symbol": "BANKBARODA.NS",
