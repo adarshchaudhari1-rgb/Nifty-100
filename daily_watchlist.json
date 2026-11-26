@@ -1,55 +1,13 @@
 {
-  "date": "2026-11-25",
-  "selected_at": "2026-11-25 10:00:20",
+  "date": "2026-11-26",
+  "selected_at": "2026-11-26 10:00:21",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
-  "instrument_keys": {
-    "HDFCLIFE.NS": "NSE_EQ|INE795G01014",
-    "INFY.NS": "NSE_EQ|INE009A01021",
-    "ICICIBANK.NS": "NSE_EQ|INE090A01021",
-    "TATACONSUM.NS": "NSE_EQ|INE192A01025",
-    "HDFCBANK.NS": "NSE_EQ|INE040A01034"
-  },
+  "instrument_keys": {},
   "stocks_with_data": 100,
-  "green": 73,
-  "red": 26,
-  "green_pct": 73.7,
-  "nature": "BULLISH",
-  "stocks": [
-    {
-      "symbol": "HDFCLIFE.NS",
-      "side": "LONG",
-      "pct_change": 5.33,
-      "price": 605.6,
-      "prev_close": 574.95
-    },
-    {
-      "symbol": "INFY.NS",
-      "side": "LONG",
-      "pct_change": 3.85,
-      "price": 1145.9,
-      "prev_close": 1103.4
-    },
-    {
-      "symbol": "ICICIBANK.NS",
-      "side": "LONG",
-      "pct_change": 3.58,
-      "price": 1642.2,
-      "prev_close": 1585.5
-    },
-    {
-      "symbol": "TATACONSUM.NS",
-      "side": "LONG",
-      "pct_change": 3.3,
-      "price": 1170.4,
-      "prev_close": 1133.0
-    },
-    {
-      "symbol": "HDFCBANK.NS",
-      "side": "LONG",
-      "pct_change": 3.2,
-      "price": 843.95,
-      "prev_close": 817.8
-    }
-  ]
+  "green": 48,
+  "red": 51,
+  "green_pct": 48.5,
+  "nature": "NEUTRAL",
+  "stocks": []
 }
