@@ -1,13 +1,55 @@
 {
-  "date": "2026-11-26",
-  "selected_at": "2026-11-26 10:00:21",
+  "date": "2026-11-27",
+  "selected_at": "2026-11-27 10:00:21",
   "universe_source": "official NSE list (100 stocks)",
   "data_source": "Upstox",
-  "instrument_keys": {},
+  "instrument_keys": {
+    "MAZDOCK.NS": "NSE_EQ|INE249Z01020",
+    "HINDZINC.NS": "NSE_EQ|INE267A01025",
+    "SOLARINDS.NS": "NSE_EQ|INE343H01029",
+    "VEDL.NS": "NSE_EQ|INE205A01025",
+    "MUTHOOTFIN.NS": "NSE_EQ|INE414G01012"
+  },
   "stocks_with_data": 100,
-  "green": 48,
-  "red": 51,
-  "green_pct": 48.5,
-  "nature": "NEUTRAL",
-  "stocks": []
+  "green": 58,
+  "red": 41,
+  "green_pct": 58.6,
+  "nature": "BULLISH",
+  "stocks": [
+    {
+      "symbol": "MAZDOCK.NS",
+      "side": "LONG",
+      "pct_change": 4.21,
+      "price": 1893.5,
+      "prev_close": 1817.0
+    },
+    {
+      "symbol": "HINDZINC.NS",
+      "side": "LONG",
+      "pct_change": 3.21,
+      "price": 543.5,
+      "prev_close": 526.6
+    },
+    {
+      "symbol": "SOLARINDS.NS",
+      "side": "LONG",
+      "pct_change": 2.98,
+      "price": 18793.0,
+      "prev_close": 18250.0
+    },
+    {
+      "symbol": "VEDL.NS",
+      "side": "LONG",
+      "pct_change": 2.69,
+      "price": 244.4,
+      "prev_close": 238.0
+    },
+    {
+      "symbol": "MUTHOOTFIN.NS",
+      "side": "LONG",
+      "pct_change": 2.47,
+      "price": 2621.2,
+      "prev_close": 2558.0
+    }
+  ]
 }
